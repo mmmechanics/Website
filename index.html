@@ -1,123 +1,505 @@
-<header>
-    <div class="logo">
-        <h2>MACKIES</h2>
-        <span>Mobile Mechanics</span>
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mackies Mobile Mechanics | Mobile Mechanic Newton-le-Willows</title>
+  <meta name="description" content="Mackies Mobile Mechanics provides mobile vehicle servicing, repairs and diagnostics across Newton-le-Willows, Haydock, Golborne, Warrington, St Helens and surrounding areas. Call 07722 092401." />
+  <meta name="theme-color" content="#0b0b0b" />
+
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --panel:#161616;
+      --panel-2:#1f1f1f;
+      --text:#ffffff;
+      --muted:#b7b7b7;
+      --line:#333333;
+      --accent:#f5a623;
+      --accent-dark:#c97d00;
+      --whatsapp:#25D366;
+      --max:1180px;
+      --radius:16px;
+      --shadow:0 18px 44px rgba(0,0,0,.35);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{width:min(var(--max), calc(100% - 40px));margin:0 auto}
+
+    /* Sticky header */
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(10,10,10,.96);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.09);
+      box-shadow:0 8px 24px rgba(0,0,0,.28);
+    }
+    .nav-wrap{
+      height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:22px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      white-space:nowrap;
+    }
+    .brand-mark{
+      width:46px;height:46px;border:3px solid #fff;border-radius:50%;
+      display:grid;place-items:center;color:#fff;font-size:24px;font-weight:900;
+      box-shadow:inset 0 0 0 5px rgba(245,166,35,.18);
+    }
+    .brand-title{
+      font-weight:950;
+      letter-spacing:-1px;
+      font-size:28px;
+      line-height:1;
+      text-transform:uppercase;
+    }
+    .brand-sub{
+      display:block;
+      color:#d8d8d8;
+      font-size:10px;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      margin-top:3px;
+    }
+    .desktop-nav{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:30px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .desktop-nav a{
+      color:#d6d6d6;
+      font-size:14px;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+    .desktop-nav a:hover{color:#fff}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      border-radius:8px;
+      padding:14px 22px;
+      font-weight:900;
+      border:1px solid transparent;
+      cursor:pointer;
+      transition:transform .18s ease, background .18s ease, border-color .18s ease;
+      line-height:1;
+      min-height:48px;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--accent);color:#111}
+    .btn-primary:hover{background:#ffb43b}
+    .btn-outline{border-color:rgba(255,255,255,.35);color:#fff;background:rgba(0,0,0,.25)}
+    .btn-outline:hover{border-color:var(--accent);background:rgba(245,166,35,.08)}
+    .btn-whatsapp{background:var(--whatsapp);color:#06150a}
+    .btn-small{padding:12px 17px;min-height:44px}
+
+    .mobile-menu-btn{display:none;background:none;border:0;color:#fff;font-size:30px;cursor:pointer}
+    .mobile-nav{display:none;border-top:1px solid rgba(255,255,255,.1);padding:12px 0 18px}
+    .mobile-nav a{display:block;padding:12px 0;color:#ddd;font-weight:800;text-transform:uppercase;letter-spacing:.8px}
+
+    /* Hero */
+    .hero{
+      position:relative;
+      min-height:calc(100vh - 76px);
+      display:grid;
+      align-items:center;
+      isolation:isolate;
+      overflow:hidden;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.92) 0%, rgba(0,0,0,.68) 45%, rgba(0,0,0,.25) 100%),
+        linear-gradient(135deg, #111 0%, #191919 35%, #2a1b00 100%);
+    }
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px),
+        radial-gradient(circle at 78% 48%, rgba(245,166,35,.22), transparent 0 28%, transparent 40%);
+      background-size:72px 72px,72px 72px,100% 100%;
+      opacity:.9;
+      z-index:-2;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      right:-6vw;bottom:-12vh;
+      width:min(780px, 58vw);height:min(780px, 58vw);
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(245,166,35,.18), transparent 58%);
+      z-index:-1;
+    }
+    .hero-content{
+      max-width:750px;
+      padding:94px 0 88px;
+    }
+    .eyebrow{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:var(--accent);
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size:13px;
+      font-weight:900;
+      margin-bottom:20px;
+    }
+    .eyebrow::before{content:"";width:34px;height:2px;background:var(--accent)}
+    h1{
+      font-size:clamp(46px, 7vw, 86px);
+      line-height:.93;
+      letter-spacing:-2px;
+      text-transform:uppercase;
+      font-weight:1000;
+      margin-bottom:16px;
+    }
+    .orange{color:var(--accent)}
+    .hero p{
+      font-size:clamp(18px, 2vw, 23px);
+      color:#ededed;
+      max-width:650px;
+      margin:24px 0 30px;
+    }
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+    .trust-row{display:flex;gap:24px;flex-wrap:wrap;color:#d9d9d9;font-weight:800;font-size:15px}
+    .trust-row span::before{content:"✓";color:var(--accent);margin-right:8px}
+
+    section{padding:86px 0;border-top:1px solid rgba(255,255,255,.06)}
+    .section-title{text-align:center;max-width:760px;margin:0 auto 44px}
+    .section-title .label{display:block;color:var(--accent);font-weight:950;letter-spacing:2px;text-transform:uppercase;font-size:13px;margin-bottom:7px}
+    .section-title h2{font-size:clamp(34px, 4.2vw, 54px);line-height:1;text-transform:uppercase;letter-spacing:-1px;margin-bottom:16px}
+    .section-title p{color:var(--muted);font-size:18px}
+
+    /* Services */
+    .services{background:#101010}
+    .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .service-card{
+      background:linear-gradient(180deg, #1a1a1a, #151515);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:29px 24px;
+      min-height:178px;
+      transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+    }
+    .service-card:hover{transform:translateY(-5px);border-color:rgba(245,166,35,.8);box-shadow:var(--shadow)}
+    .service-icon{font-size:32px;color:var(--accent);margin-bottom:18px}
+    .service-card h3{text-transform:uppercase;font-size:18px;line-height:1.15;margin-bottom:12px}
+    .service-card p{color:var(--muted);font-size:15px}
+    .service-cta{text-align:center;margin-top:40px;color:var(--muted);font-size:18px}
+    .service-cta .btn{margin-top:16px}
+
+    /* About */
+    .about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    .photo-card{
+      position:relative;min-height:430px;border-radius:18px;overflow:hidden;background:
+        linear-gradient(135deg, rgba(245,166,35,.35), transparent 32%),
+        linear-gradient(145deg, #272727, #111);
+      border:1px solid rgba(255,255,255,.1);box-shadow:var(--shadow);
+    }
+    .photo-card::before{
+      content:"";position:absolute;inset:0;
+      background:
+        radial-gradient(circle at 35% 35%, rgba(255,255,255,.08), transparent 0 22%, transparent 35%),
+        repeating-linear-gradient(135deg, rgba(255,255,255,.045) 0 2px, transparent 2px 18px);
+      opacity:.8;
+    }
+    .photo-card::after{
+      content:"Mobile servicing • Repairs • Diagnostics";
+      position:absolute;left:26px;bottom:24px;right:26px;
+      font-size:30px;line-height:1.08;text-transform:uppercase;font-weight:1000;color:#fff;
+      text-shadow:0 8px 24px rgba(0,0,0,.55);
+    }
+    .about-copy .label{color:var(--accent);font-weight:950;letter-spacing:2px;text-transform:uppercase;font-size:13px;margin-bottom:10px;display:block}
+    .about-copy h2{font-size:clamp(34px, 4.5vw, 58px);line-height:.98;text-transform:uppercase;letter-spacing:-1px;margin-bottom:20px}
+    .about-copy p{color:#d8d8d8;font-size:18px;margin-bottom:24px}
+    .check-list{list-style:none;display:grid;gap:13px;margin:24px 0 28px}
+    .check-list li{display:flex;gap:12px;align-items:flex-start;font-weight:850;color:#eeeeee}
+    .check-list li::before{content:"✓";display:inline-grid;place-items:center;min-width:22px;height:22px;border:2px solid var(--accent);border-radius:50%;color:var(--accent);font-size:12px;font-weight:1000;margin-top:2px}
+
+    /* Areas */
+    .areas{background:#131313}
+    .area-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+    .area-pill{border:1px solid var(--line);border-radius:999px;padding:15px 19px;background:#191919;text-align:center;font-weight:850;color:#e9e9e9}
+
+    /* Feedback */
+    .feedback-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feedback-card{background:#181818;border:1px solid var(--line);border-radius:12px;padding:26px;min-height:190px}
+    .stars{color:var(--accent);letter-spacing:1px;margin-bottom:18px}
+    .feedback-card p{color:#d6d6d6;margin-bottom:22px}
+    .review-note{font-size:14px;color:#aaa;border-top:1px solid var(--line);padding-top:16px}
+
+    /* Contact */
+    .contact{background:linear-gradient(180deg,#141414,#090909)}
+    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+    .contact-card{background:#171717;border:1px solid var(--line);border-radius:16px;padding:30px;box-shadow:var(--shadow)}
+    .contact-card h3{text-transform:uppercase;font-size:24px;margin-bottom:14px}
+    .contact-card p{color:var(--muted);margin-bottom:20px}
+    .contact-actions{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+    .quick-form{display:grid;gap:12px}
+    .quick-form label{font-weight:800;font-size:14px;color:#e6e6e6}
+    .quick-form input,.quick-form textarea{
+      width:100%;background:#0e0e0e;color:#fff;border:1px solid #3a3a3a;border-radius:10px;padding:14px;font:inherit;outline:none;
+    }
+    .quick-form textarea{min-height:140px;resize:vertical}
+    .quick-form input:focus,.quick-form textarea:focus{border-color:var(--accent)}
+
+    footer{padding:24px 0;text-align:center;color:#8f8f8f;background:#050505;font-size:14px}
+
+    .floating-whatsapp{
+      position:fixed;right:20px;bottom:20px;z-index:999;
+      width:58px;height:58px;border-radius:50%;background:var(--whatsapp);color:#06230d;
+      display:grid;place-items:center;font-size:30px;box-shadow:0 10px 28px rgba(0,0,0,.35);border:2px solid rgba(255,255,255,.25);
+    }
+    .floating-whatsapp:hover{transform:translateY(-2px)}
+
+    @media(max-width:980px){
+      .desktop-nav{display:none}
+      .mobile-menu-btn{display:block}
+      .header-call{display:none}
+      .mobile-nav.open{display:block}
+      .service-grid{grid-template-columns:repeat(2,1fr)}
+      .about-wrap,.contact-wrap{grid-template-columns:1fr}
+      .photo-card{min-height:340px;order:2}
+      .area-grid{grid-template-columns:repeat(2,1fr)}
+      .feedback-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:560px){
+      .container{width:min(100% - 28px, var(--max))}
+      .nav-wrap{height:68px}
+      .brand-mark{width:40px;height:40px;font-size:20px}
+      .brand-title{font-size:22px}
+      .brand-sub{font-size:8px;letter-spacing:2.3px}
+      .hero{min-height:auto}
+      .hero-content{padding:64px 0 62px}
+      .hero-actions .btn{width:100%}
+      .trust-row{gap:10px;flex-direction:column}
+      section{padding:64px 0}
+      .service-grid,.area-grid{grid-template-columns:1fr}
+      .photo-card::after{font-size:24px}
+      .floating-whatsapp{right:14px;bottom:14px;width:54px;height:54px}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Mackies Mobile Mechanics home">
+        <span class="brand-mark">⚙</span>
+        <span>
+          <span class="brand-title">Mackies</span>
+          <span class="brand-sub">Mobile Mechanics</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#areas">Areas</a>
+        <a href="#feedback">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn btn-primary btn-small header-call" href="tel:07722092401">☎ 07722 092401</a>
+      <button class="mobile-menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
     </div>
 
-    <nav>
-        <a href="#services/a>
-        <aboutAbout</a>
-        #areasAreas</a>
-        <aontactContact</a>
-    </nav>
-
-    <el:07722092401
-        📞 07722 092401
-    </a>
-</header>
-
-<section class="hero">
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-        <small>NEWTON-LE-WILLOWS & SURROUNDING AREAS</small>
-
-        <h1>
-            YOUR TRUSTED MOBILE MECHANIC
-        </h1>
-
-        <h2>
-            WE COME TO YOU
-        </h2>
-
-        <p>
-            Professional servicing, repairs and diagnostics at your home, workplace
-            or roadside. Honest prices, reliable workmanship and no unnecessary upselling.
-        </p>
-
-        <div class="buttons">
-            <al:07722092401
-                📞 Call Now
-            </a>
-
-            https://wa.me/447722092401
-                💬 WhatsApp Us
-            </a>
-        </div>
-
-        <ul class="features">
-            <li>✓ All Makes & Models</li>
-            <li>✓ No Call-Out Fee</li>
-            <li>✓ Free Quotes</li>
-        </ul>
+    <div class="container mobile-nav" id="mobileNav">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#areas">Areas</a>
+      <a href="#feedback">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="tel:07722092401">☎ Call 07722 092401</a>
     </div>
-</section>
+  </header>
 
-<section id="services">
-    <h2>Our Services</h2>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="eyebrow">Newton-le-Willows & surrounding areas</div>
+        <h1>Your trusted mobile mechanic <span class="orange">we come to you</span></h1>
+        <p>Professional vehicle servicing, repairs and diagnostics at your home, workplace or roadside. Honest pricing, reliable workmanship and no unnecessary upselling.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:07722092401">☎ Call now: 07722 092401</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/447722092401" target="_blank" rel="noopener">💬 WhatsApp us</a>
+          <a class="btn btn-outline" href="#contact">Get a free quote</a>
+        </div>
+        <div class="trust-row" aria-label="Key benefits">
+          <span>All makes & models</span>
+          <span>No call-out fee</span>
+          <span>Free quotes</span>
+          <span>Local & reliable</span>
+        </div>
+      </div>
+    </section>
 
-    <div class="service-grid">
-
-        <div class="card">
-            <h3>🔧 Vehicle Servicing</h3>
-            <p>Full and interim servicing for all makes and models.</p>
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-title">
+          <span class="label">What we do</span>
+          <h2>Our services</h2>
+          <p>From routine servicing to fault finding and repairs, Mackies Mobile Mechanics helps keep your vehicle safely on the road.</p>
         </div>
 
-        <div class="card">
-            <h3>🛞 Brakes</h3>
-            <p>Pads, discs, drums and brake fluid changes.</p>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-icon">🔧</div><h3>Vehicle servicing</h3><p>Full and interim services for all makes and models.</p></article>
+          <article class="service-card"><div class="service-icon">🛞</div><h3>Brakes</h3><p>Pads, discs, drums and brake fluid replacement.</p></article>
+          <article class="service-card"><div class="service-icon">⚙️</div><h3>Clutches</h3><p>Clutch replacement, adjustment and related repairs.</p></article>
+          <article class="service-card"><div class="service-icon">🚗</div><h3>Suspension & steering</h3><p>Shock absorbers, springs, bushes and steering components.</p></article>
+          <article class="service-card"><div class="service-icon">💨</div><h3>Exhausts</h3><p>Exhaust repairs, replacements and fitting.</p></article>
+          <article class="service-card"><div class="service-icon">🔋</div><h3>Batteries</h3><p>Battery testing, supply and fitting.</p></article>
+          <article class="service-card"><div class="service-icon">✅</div><h3>MOT preparation</h3><p>Pre-MOT checks and repairs to help get you through first time.</p></article>
+          <article class="service-card"><div class="service-icon">💻</div><h3>Engine diagnostics</h3><p>Fault code reading, diagnostics and practical repair advice.</p></article>
         </div>
 
-        <div class="card">
-            <h3>⚙️ Clutches</h3>
-            <p>Clutch replacement and repairs.</p>
+        <div class="service-cta">
+          <p>Not sure if your repair is covered? Just ask.</p>
+          <a class="btn btn-primary" href="tel:07722092401">☎ Call 07722 092401</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-wrap">
+        <div class="photo-card" aria-label="Decorative automotive workshop style image"></div>
+        <div class="about-copy">
+          <span class="label">About us</span>
+          <h2>Honest. Reliable. Local.</h2>
+          <p>Mackies Mobile Mechanics is an independent mobile mechanic based in Newton-le-Willows. The business provides servicing, repairs and diagnostics across the local area, bringing the garage to you and saving you the hassle of arranging recovery or sitting around at a workshop.</p>
+          <ul class="check-list">
+            <li>Transparent pricing with no hidden costs</li>
+            <li>Quality workmanship on all makes and models</li>
+            <li>Friendly local service you can trust</li>
+            <li>Mechanical repairs only — no bodywork or accident repairs</li>
+          </ul>
+          <a class="btn btn-primary" href="tel:07722092401">☎ 07722 092401</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="areas" id="areas">
+      <div class="container">
+        <div class="section-title">
+          <span class="label">Coverage</span>
+          <h2>Areas we cover</h2>
+          <p>Based in Newton-le-Willows, covering nearby areas across Merseyside, Greater Manchester and Cheshire.</p>
+        </div>
+        <div class="area-grid">
+          <div class="area-pill">Newton-le-Willows</div>
+          <div class="area-pill">Earlestown</div>
+          <div class="area-pill">Haydock</div>
+          <div class="area-pill">Golborne</div>
+          <div class="area-pill">Warrington</div>
+          <div class="area-pill">St Helens</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="feedback">
+      <div class="container">
+        <div class="section-title">
+          <span class="label">Customer feedback</span>
+          <h2>Reviews</h2>
+          <p>Add genuine customer reviews here once available. Avoid using fake reviews — real feedback will build far more trust.</p>
+        </div>
+        <div class="feedback-grid">
+          <article class="feedback-card"><div class="stars">★★★★★</div><p>Real review from a customer can be added here.</p><div class="review-note">Customer name • Location</div></article>
+          <article class="feedback-card"><div class="stars">★★★★★</div><p>Real review from a customer can be added here.</p><div class="review-note">Customer name • Location</div></article>
+          <article class="feedback-card"><div class="stars">★★★★★</div><p>Real review from a customer can be added here.</p><div class="review-note">Customer name • Location</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-wrap">
+        <div class="contact-card">
+          <h3>Get in touch</h3>
+          <p>Call or message to ask about availability, pricing or whether a specific repair can be carried out mobile.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="tel:07722092401">☎ Call 07722 092401</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/447722092401" target="_blank" rel="noopener">💬 Message on WhatsApp</a>
+          </div>
         </div>
 
-        <div class="card">
-            <h3>🚗 Suspension & Steering</h3>
-            <p>Diagnosis and repair of suspension issues.</p>
+        <div class="contact-card">
+          <h3>Quick WhatsApp enquiry</h3>
+          <p>Fill this in and it will open WhatsApp with your message ready to send.</p>
+          <form class="quick-form" id="whatsappForm">
+            <div>
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" />
+            </div>
+            <div>
+              <label for="vehicle">Vehicle</label>
+              <input id="vehicle" name="vehicle" type="text" placeholder="Example: Ford Fiesta 2016" />
+            </div>
+            <div>
+              <label for="message">What do you need help with?</label>
+              <textarea id="message" name="message" placeholder="Example: brake pads need replacing / warning light on / clutch issue"></textarea>
+            </div>
+            <button class="btn btn-whatsapp" type="submit">💬 Send via WhatsApp</button>
+          </form>
         </div>
+      </div>
+    </section>
+  </main>
 
-        <div class="card">
-            <h3>🔋 Batteries</h3>
-            <p>Testing, supply and fitting.</p>
-        </div>
+  <footer>
+    <div class="container">© 2026 Mackies Mobile Mechanics. Mobile mechanic in Newton-le-Willows and surrounding areas.</div>
+  </footer>
 
-        <div class="card">
-            <h3>💻 Diagnostics</h3>
-            <p>Fault code reading and diagnosis.</p>
-        </div>
+  <a class="floating-whatsapp" href="https://wa.me/447722092401" target="_blank" rel="noopener" aria-label="Message Mackies Mobile Mechanics on WhatsApp">💬</a>
 
-    </div>
-</section>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.textContent = open ? '×' : '☰';
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = '☰';
+      });
+    });
 
-<section id="about">
-    <h2>Honest. Reliable. Local.</h2>
-
-    <p>
-        Mackies Mobile Mechanics is based in Newton-le-Willows and provides
-        mobile servicing, repairs and diagnostics across the local area.
-        We bring the garage to you, saving time, inconvenience and recovery costs.
-    </p>
-
-    <ul>
-        <li>✓ Transparent pricing</li>
-        <li>✓ Quality workmanship</li>
-        <li>✓ Friendly local service</li>
-        <li>✓ Fully mobile</li>
-    </ul>
-</section>
-
-<section id="areas">
-    <h2>Areas We Cover</h2>
-
-    <p>
-        Newton-le-Willows, Earlestown, Haydock, Golborne,
-        Warrington, St Helens and surrounding areas.
-    </p>
-</section>
-
-<section id="contact">
-    <h2>Get In Touch</h2>
-
-    <a
+    document.getElementById('whatsappForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const vehicle = document.getElementById('vehicle').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const text = `Hi Mackies Mobile Mechanics,%0A%0AMy name is: ${encodeURIComponent(name || '')}%0AVehicle: ${encodeURIComponent(vehicle || '')}%0AEnquiry: ${encodeURIComponent(message || '')}`;
+      window.open(`https://wa.me/447722092401?text=${text}`, '_blank', 'noopener');
+    });
+  </script>
+</body>
+</html>
