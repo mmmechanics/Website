@@ -468,6 +468,27 @@
       text-transform: uppercase;
       text-shadow: 0 8px 23px rgba(0,0,0,0.60);
     }
+    .about-photo {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 980px) {
+  .about-photo {
+    height: 320px;
+  }
+}
+
+@media (max-width: 620px) {
+  .about-photo {
+    height: 240px;
+    border-radius: 15px;
+  }
+}
 
     .about-copy .label {
       color: var(--accent);
@@ -878,11 +899,16 @@
       </div>
     </section>
 
-    <section id="about">
-      <div class="container about-wrap">
-        <div class="visual-panel" aria-hidden="true"></div>
+<section id="about">
+  <div class="container about-wrap">
 
-        <div class="about-copy">
+    <img
+      src="ford-ranger-transit-servicing-newton-le-willows.png"
+      alt="Mobile mechanic servicing a Ford Transit in Newton-le-Willows"
+      class="about-photo">
+
+    <div class="about-copy">
+
           <span class="label">About us</span>
           <h2>Honest. Reliable. Local.</h2>
           <p>Mackie's Mobile Mechanics is an independent mobile mechanic based in Newton-le-Willows, providing servicing, repairs and diagnostics across the North West.</p>
