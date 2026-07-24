@@ -316,6 +316,53 @@ section { padding: 78px 0; border-top: 1px solid rgba(255,255,255,0.06); }
 .review-panel h3 { font-size: clamp(28px, 3vw, 42px); line-height: 1.05; text-transform: uppercase; margin-bottom: 14px; }
 .review-panel p { color: var(--muted); font-size: 19px; max-width: 650px; margin: 0 auto 26px; }
 
+.faq{
+  background:#101010;
+}
+
+.faq-list{
+  display:grid;
+  gap:12px;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.faq-item{
+  background:#151515;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:16px;
+  overflow:hidden;
+}
+
+.faq-item summary{
+  cursor:pointer;
+  padding:22px;
+  font-weight:800;
+  list-style:none;
+  font-size:18px;
+}
+
+.faq-item summary::-webkit-details-marker{
+  display:none;
+}
+
+.faq-item summary::after{
+  content:"+";
+  float:right;
+  color:var(--accent);
+  font-size:24px;
+}
+
+.faq-item[open] summary::after{
+  content:"−";
+}
+
+.faq-item p{
+  padding:0 22px 22px;
+  color:#c7c7c7;
+  line-height:1.7;
+}
+  
 .contact { background: linear-gradient(180deg, #131313, #080808); }
 .contact-panel { max-width: 760px; margin: 0 auto; display: grid; gap: 14px; background: linear-gradient(180deg, #191919, #121212); border: 1px solid var(--line); border-radius: 20px; padding: 28px; box-shadow: var(--shadow); }
 .contact-panel .btn { width: 100%; font-size: 17px; }
@@ -672,6 +719,117 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 
 </div>
   </section>
+
+  <section class="faq" id="faq">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span class="label">Frequently Asked Questions</span>
+      <h2>Mobile Mechanic FAQs – Newton-le-Willows & Surrounding Areas</h2>
+      <p>
+        Common questions about vehicle servicing, brake repairs,
+        battery replacement, engine diagnostics, MOT preparation
+        and mobile mechanic services in Newton-le-Willows,
+        Warrington and surrounding areas.
+      </p>
+    </div>
+
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>Can a mobile mechanic come to my home or workplace in Newton-le-Willows?</summary>
+        <p>
+          Yes. Mackie's Mobile Mechanics provides mobile mechanic services at homes,
+          workplaces and suitable roadside locations across Newton-le-Willows,
+          Haydock, Earlestown, Golborne, Warrington, St Helens and surrounding areas.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What areas do Mackie's Mobile Mechanics cover?</summary>
+        <p>
+          We cover Newton-le-Willows, Haydock, Earlestown, Golborne, Warrington,
+          St Helens, Lowton, Leigh, Ashton-in-Makerfield, Winwick,
+          Burtonwood and nearby areas.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can a mobile mechanic replace a car battery at my location?</summary>
+        <p>
+          Yes. We provide mobile battery testing, battery replacement and
+          battery fitting services for many vehicle makes and models. This means
+          you don't need to arrange recovery or visit a garage for a flat battery.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do you carry out brake pad replacement and brake repairs?</summary>
+        <p>
+          Yes. We provide brake pad replacement, brake disc replacement,
+          brake inspections and general brake repairs to help keep your vehicle
+          safe and roadworthy.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can you diagnose engine warning lights and vehicle faults?</summary>
+        <p>
+          Yes. We provide engine diagnostics, fault code reading and vehicle
+          fault diagnosis for many mechanical and electrical problems.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do you carry out vehicle servicing and car maintenance?</summary>
+        <p>
+          Yes. We provide interim servicing, full servicing, oil changes,
+          filter replacements and general vehicle maintenance for many makes
+          and models.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can a mobile mechanic prepare my car for an MOT?</summary>
+        <p>
+          Yes. We carry out vehicle inspections, MOT preparation and repairs
+          to help identify and resolve issues before your MOT test.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do you work on vans and commercial vehicles?</summary>
+        <p>
+          Yes. We carry out servicing, repairs, maintenance and diagnostics
+          on many vans and commercial vehicles throughout Newton-le-Willows
+          and the surrounding areas.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How much does a mobile mechanic cost in Newton-le-Willows?</summary>
+        <p>
+          Costs vary depending on the repair or service required. Contact
+          Mackie's Mobile Mechanics for a free, no-obligation quote and
+          honest advice.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Why choose a mobile mechanic instead of a garage?</summary>
+        <p>
+          A mobile mechanic brings the garage to your home or workplace,
+          helping you save time and avoid the inconvenience of arranging
+          transport, recovery or garage visits.
+        </p>
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
 
   <section class="contact" id="contact">
     <div class="container">
