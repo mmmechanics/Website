@@ -285,7 +285,18 @@ section { padding: 78px 0; border-top: 1px solid rgba(255,255,255,0.06); }
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
-}  
+} 
+  @media (max-width: 900px){
+
+  .reviews-container{
+    grid-template-columns:1fr;
+  }
+
+  .review-grid{
+    grid-template-columns:1fr;
+  }
+
+}
 
 .review-card p{
   margin-bottom:15px;
