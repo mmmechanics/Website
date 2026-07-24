@@ -240,7 +240,32 @@ section { padding: 78px 0; border-top: 1px solid rgba(255,255,255,0.06); }
 .job-card-body p { color: var(--muted); font-size: 15px; }
 
 .reviews { background: #090909; }
-.review-panel { max-width: 880px; margin: 0 auto; text-align: center; background: linear-gradient(180deg, #1a1a1a, #131313); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); padding: 40px 28px; }
+
+.reviews-container{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:30px;
+  align-items:start;
+}
+
+.review-summary{
+  background:#151515;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:16px;
+  padding:30px;
+  text-align:center;
+}
+
+.review-panel {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(180deg, #1a1a1a, #131313);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 40px 28px;
+}
 .stars { color: var(--accent); font-size: 24px; letter-spacing: 2px; margin-bottom: 14px; }
 .review-panel h3 { font-size: clamp(28px, 3vw, 42px); line-height: 1.05; text-transform: uppercase; margin-bottom: 14px; }
 .review-panel p { color: var(--muted); font-size: 19px; max-width: 650px; margin: 0 auto 26px; }
@@ -547,13 +572,59 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
         <p>See why local customers recommend Mackie's Mobile Mechanics.</p>
       </div>
 
-      <div class="review-panel">
-        <div class="stars">★★★★★</div>
-        <h3>4.9 Google Rating</h3>
-        <p>Based on 53 Google Reviews from customers across Newton-le-Willows and the surrounding areas.</p>
-        <a class="btn btn-primary" href="https://share.google/lOJuo4efRSESRo94" target="_blank" rel="noopener">⭐ View Google Reviews</a>
-      </div>
+<div class="reviews-container">
+
+  <div class="review-summary">
+
+    <div class="rating-score">4.9</div>
+
+    <div class="rating-stars">
+      ★★★★★
     </div>
+
+    <p class="rating-count">
+      Based on 54 Google Reviews
+    </p>
+
+    <div class="review-buttons">
+
+      <a class="btn btn-primary" href="https://share.google/lOJuo4efRSESRo94" target="_blank" rel="noopener">
+        ⭐ View Reviews
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="review-grid">
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>
+        "Excellent service and very reliable. Highly recommended."
+      </p>
+      <span>Darran Lawson</span>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>
+        "Turned up on time and fixed the issue quickly."
+      </p>
+      <span>Ala Ahmed</span>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>
+        "Professional, knowledgeable and fairly priced."
+      </p>
+      <span>Rick Loughman</span>
+    </div>
+
+  </div>
+
+</div>
   </section>
 
   <section class="contact" id="contact">
