@@ -25,13 +25,23 @@
   ],
   "serviceType":[
     "Mobile mechanic",
+    "Auto mechanic",
+    "Mechanic near me",
     "Vehicle servicing",
-    "Brake repairs",
+    "Car servicing",
+    "Car maintenance",
+    "Vehicle maintenance",
+    "Brake repair",
+    "Brake pad replacement",
+    "Vehicle inspection",
+    "Car inspection",
     "Clutch replacement",
     "Engine diagnostics",
-    "Suspension repairs",
-    "Steering repairs",
-    "Battery replacement",
+    "Engine repair",
+    "Suspension repair",
+    "Steering repair",
+    "Car battery replacement",
+    "Vehicle battery replacement",
     "Exhaust repairs",
     "MOT preparation",
     "Air conditioning regas",
@@ -45,7 +55,7 @@
 
 <title>Mobile Mechanic Newton-le-Willows | Mackie's Mobile Mechanics</title>
 
-<meta name="description" content="Mobile mechanic in Newton-le-Willows providing vehicle servicing, brake repairs, clutch replacements, engine diagnostics, MOT preparation and general mechanical repairs. Covering Haydock, Golborne, Warrington and St Helens.">
+<meta name="description" content="Mobile mechanic in Newton-le-Willows providing vehicle servicing, brake repairs, brake pad replacement, car inspections, engine diagnostics, suspension repairs, MOT preparation and general mechanical repairs. Covering Haydock, Golborne, Warrington and St Helens.">
 
 <meta property="og:title" content="Mackie's Mobile Mechanics">
 <meta property="og:description" content="Mobile mechanic covering Newton-le-Willows, Haydock, Golborne, Warrington and surrounding areas.">
@@ -69,19 +79,9 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 html { scroll-behavior: smooth; scroll-padding-top: 86px; }
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
+body { font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
 a { color: inherit; text-decoration: none; }
-
 .container { width: min(var(--max), calc(100% - 28px)); margin: 0 auto; }
 
 .btn {
@@ -100,7 +100,6 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.1;
   text-align: center;
 }
-
 .btn:hover { transform: translateY(-2px); }
 .btn-primary { background: var(--accent); color: #0b0b0b; }
 .btn-primary:hover { background: #ffba45; }
@@ -119,17 +118,8 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 8px 22px rgba(0,0,0,0.28);
   backdrop-filter: blur(10px);
 }
-
-.nav-wrap {
-  min-height: 76px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
+.nav-wrap { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .brand { display: flex; align-items: center; gap: 13px; white-space: nowrap; }
-
 .brand-icon {
   width: 48px;
   height: 48px;
@@ -141,44 +131,11 @@ a { color: inherit; text-decoration: none; }
   font-size: 24px;
   box-shadow: inset 0 0 0 5px rgba(245,170,47,0.13);
 }
-
-.brand-title {
-  display: block;
-  font-size: 28px;
-  line-height: 1;
-  font-weight: 1000;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-}
-
-.brand-subtitle {
-  display: block;
-  margin-top: 4px;
-  color: #dedede;
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 800;
-}
-
-.desktop-nav {
-  display: flex;
-  gap: 26px;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.desktop-nav a {
-  color: #dddddd;
-  font-size: 14px;
-  letter-spacing: 0.8px;
-  font-weight: 900;
-  text-transform: uppercase;
-}
+.brand-title { display: block; font-size: 28px; line-height: 1; font-weight: 1000; text-transform: uppercase; letter-spacing: -1px; }
+.brand-subtitle { display: block; margin-top: 4px; color: #dedede; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 800; }
+.desktop-nav { display: flex; gap: 26px; align-items: center; justify-content: center; margin-left: auto; margin-right: auto; }
+.desktop-nav a { color: #dddddd; font-size: 14px; letter-spacing: 0.8px; font-weight: 900; text-transform: uppercase; }
 .desktop-nav a:hover { color: #fff; }
-
 .menu-button { display: none; background: none; border: 0; color: #fff; font-size: 30px; cursor: pointer; }
 .mobile-nav { display: none; padding: 12px 0 18px; border-top: 1px solid var(--line); }
 .mobile-nav.open { display: block; }
@@ -198,7 +155,6 @@ a { color: inherit; text-decoration: none; }
     radial-gradient(circle at 82% 45%, rgba(245,170,47,0.28), transparent 0 22%, transparent 42%),
     linear-gradient(135deg, #111 0%, #181818 42%, #2a1a00 100%);
 }
-
 .hero::before {
   content: "";
   position: absolute;
@@ -210,74 +166,27 @@ a { color: inherit; text-decoration: none; }
   background-size: 70px 70px;
   opacity: 0.85;
 }
-
 .hero-content { max-width: 980px; padding: 72px 0 66px; }
-
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 13px;
-  font-weight: 1000;
-}
+.eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-weight: 1000; }
 .eyebrow::before { content: ""; width: 36px; height: 2px; background: var(--accent); }
-
-h1 {
-  font-size: clamp(45px, 6.4vw, 86px);
-  line-height: 0.94;
-  letter-spacing: -2px;
-  text-transform: uppercase;
-  font-weight: 1000;
-  margin-bottom: 22px;
-}
-
+h1 { font-size: clamp(45px, 6.4vw, 86px); line-height: 0.94; letter-spacing: -2px; text-transform: uppercase; font-weight: 1000; margin-bottom: 22px; }
 .orange { color: var(--accent); }
 .hero p { max-width: 760px; color: #efefef; font-size: clamp(18px, 2vw, 22px); margin-bottom: 30px; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 30px; }
 .trust-row { display: flex; gap: 12px; flex-wrap: wrap; }
-.trust-row span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 999px;
-  color: #eeeeee;
-  padding: 10px 14px;
-  font-weight: 900;
-  font-size: 14px;
-}
+.trust-row span { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; color: #eeeeee; padding: 10px 14px; font-weight: 900; font-size: 14px; }
 .trust-row span::before { content: "✓"; color: var(--accent); font-weight: 1000; }
 
 /* Sections */
 section { padding: 78px 0; border-top: 1px solid rgba(255,255,255,0.06); }
 .section-title { max-width: 860px; margin: 0 auto 42px; text-align: center; }
-.section-title .label {
-  display: block;
-  margin-bottom: 9px;
-  color: var(--accent);
-  font-size: 13px;
-  font-weight: 1000;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
+.section-title .label { display: block; margin-bottom: 9px; color: var(--accent); font-size: 13px; font-weight: 1000; letter-spacing: 2px; text-transform: uppercase; }
 .section-title h2 { font-size: clamp(34px, 4vw, 56px); line-height: 1; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 18px; }
 .section-title p { color: var(--muted); font-size: 18px; }
 
 .services { background: #101010; }
 .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
-.card {
-  background: linear-gradient(180deg, #1a1a1a, #141414);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 28px;
-  box-shadow: 0 10px 26px rgba(0,0,0,0.16);
-}
+.card { background: linear-gradient(180deg, #1a1a1a, #141414); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: 0 10px 26px rgba(0,0,0,0.16); }
 .service-card { min-height: 176px; transition: transform 0.18s ease, border-color 0.18s ease; }
 .service-card:hover { transform: translateY(-4px); border-color: rgba(245,170,47,0.72); }
 .service-icon { color: var(--accent); font-size: 32px; margin-bottom: 16px; }
@@ -285,93 +194,23 @@ section { padding: 78px 0; border-top: 1px solid rgba(255,255,255,0.06); }
 .service-card p, .card p { color: var(--muted); }
 
 /* Feature photo strip */
-.photo-strip {
-  background: #0c0c0c;
-  padding-top: 66px;
-  padding-bottom: 66px;
-}
-.photo-strip-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-}
-.photo-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  border: 1px solid var(--line);
-  min-height: 340px;
-  background: #111;
-  box-shadow: var(--shadow);
-}
-.photo-card img {
-  width: 100%;
-  height: 100%;
-  min-height: 340px;
-  object-fit: cover;
-  display: block;
-  filter: saturate(1.05) contrast(1.03);
-}
-.photo-card-caption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 22px;
-  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.88));
-}
-.photo-card-caption span {
-  display: block;
-  color: var(--accent);
-  font-size: 12px;
-  font-weight: 1000;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-}
-.photo-card-caption h3 {
-  font-size: 26px;
-  line-height: 1.05;
-  text-transform: uppercase;
-  margin-bottom: 7px;
-}
+.photo-strip { background: #0c0c0c; padding-top: 66px; padding-bottom: 66px; }
+.photo-strip-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.photo-card { position: relative; overflow: hidden; border-radius: 20px; border: 1px solid var(--line); min-height: 340px; background: #111; box-shadow: var(--shadow); }
+.photo-card img { width: 100%; height: 100%; min-height: 340px; object-fit: cover; display: block; filter: saturate(1.05) contrast(1.03); }
+.photo-card-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.88)); }
+.photo-card-caption span { display: block; color: var(--accent); font-size: 12px; font-weight: 1000; letter-spacing: 1.8px; text-transform: uppercase; margin-bottom: 5px; }
+.photo-card-caption h3 { font-size: 26px; line-height: 1.05; text-transform: uppercase; margin-bottom: 7px; }
 .photo-card-caption p { color: #e6e6e6; font-size: 15px; }
 
 .about-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
-.about-photo {
-  width: 100%;
-  height: 430px;
-  object-fit: cover;
-  border-radius: 20px;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-}
-.about-copy .label {
-  color: var(--accent);
-  font-size: 13px;
-  letter-spacing: 2px;
-  font-weight: 1000;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  display: block;
-}
+.about-photo { width: 100%; height: 430px; object-fit: cover; border-radius: 20px; border: 1px solid var(--line); box-shadow: var(--shadow); }
+.about-copy .label { color: var(--accent); font-size: 13px; letter-spacing: 2px; font-weight: 1000; text-transform: uppercase; margin-bottom: 10px; display: block; }
 .about-copy h2 { font-size: clamp(34px, 4vw, 58px); line-height: 0.98; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 22px; }
 .about-copy p { color: #dedede; font-size: 18px; margin-bottom: 24px; }
 .check-list { list-style: none; display: grid; gap: 12px; margin: 24px 0 30px; }
 .check-list li { display: flex; gap: 12px; align-items: flex-start; color: #eeeeee; font-weight: 850; }
-.check-list li::before {
-  content: "✓";
-  min-width: 23px;
-  height: 23px;
-  border-radius: 50%;
-  border: 2px solid var(--accent);
-  display: inline-grid;
-  place-items: center;
-  color: var(--accent);
-  font-weight: 1000;
-  font-size: 12px;
-  margin-top: 2px;
-}
+.check-list li::before { content: "✓"; min-width: 23px; height: 23px; border-radius: 50%; border: 2px solid var(--accent); display: inline-grid; place-items: center; color: var(--accent); font-weight: 1000; font-size: 12px; margin-top: 2px; }
 
 .areas { background: #121212; }
 .area-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; max-width: 980px; margin: 0 auto; }
@@ -379,89 +218,28 @@ section { padding: 78px 0; border-top: 1px solid rgba(255,255,255,0.06); }
 
 /* Recent Jobs */
 .recent-jobs { background: #0c0c0c; }
-.jobs-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-.job-card {
-  background: linear-gradient(180deg, #1a1a1a, #121212);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.24);
-}
-.job-card img {
-  width: 100%;
-  height: 245px;
-  object-fit: cover;
-  display: block;
-}
+.jobs-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.job-card { background: linear-gradient(180deg, #1a1a1a, #121212); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.24); }
+.job-card img { width: 100%; height: 245px; object-fit: cover; display: block; }
 .job-card-body { padding: 20px; }
-.job-card-body span {
-  display: block;
-  color: var(--accent);
-  font-size: 12px;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-  font-weight: 1000;
-  margin-bottom: 7px;
-}
-.job-card-body h3 {
-  font-size: 21px;
-  text-transform: uppercase;
-  line-height: 1.13;
-  margin-bottom: 9px;
-}
+.job-card-body span { display: block; color: var(--accent); font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase; font-weight: 1000; margin-bottom: 7px; }
+.job-card-body h3 { font-size: 21px; text-transform: uppercase; line-height: 1.13; margin-bottom: 9px; }
 .job-card-body p { color: var(--muted); font-size: 15px; }
 
 .reviews { background: #090909; }
-.review-panel {
-  max-width: 880px;
-  margin: 0 auto;
-  text-align: center;
-  background: linear-gradient(180deg, #1a1a1a, #131313);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-  padding: 40px 28px;
-}
+.review-panel { max-width: 880px; margin: 0 auto; text-align: center; background: linear-gradient(180deg, #1a1a1a, #131313); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); padding: 40px 28px; }
 .stars { color: var(--accent); font-size: 24px; letter-spacing: 2px; margin-bottom: 14px; }
 .review-panel h3 { font-size: clamp(28px, 3vw, 42px); line-height: 1.05; text-transform: uppercase; margin-bottom: 14px; }
 .review-panel p { color: var(--muted); font-size: 19px; max-width: 650px; margin: 0 auto 26px; }
 
 .contact { background: linear-gradient(180deg, #131313, #080808); }
-.contact-panel {
-  max-width: 760px;
-  margin: 0 auto;
-  display: grid;
-  gap: 14px;
-  background: linear-gradient(180deg, #191919, #121212);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 28px;
-  box-shadow: var(--shadow);
-}
+.contact-panel { max-width: 760px; margin: 0 auto; display: grid; gap: 14px; background: linear-gradient(180deg, #191919, #121212); border: 1px solid var(--line); border-radius: 20px; padding: 28px; box-shadow: var(--shadow); }
 .contact-panel .btn { width: 100%; font-size: 17px; }
 
 footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 0; font-size: 14px; }
-.floating-whatsapp {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  z-index: 999;
-  display: grid;
-  place-items: center;
-  background: var(--whatsapp);
-  color: #06230d;
-  font-size: 29px;
-  border: 2px solid rgba(255,255,255,0.25);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.38);
-}
+.floating-whatsapp { position: fixed; right: 18px; bottom: 18px; width: 58px; height: 58px; border-radius: 50%; z-index: 999; display: grid; place-items: center; background: var(--whatsapp); color: #06230d; font-size: 29px; border: 2px solid rgba(255,255,255,0.25); box-shadow: 0 12px 30px rgba(0,0,0,0.38); }
 
+@media (max-width: 1180px) { .jobs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 980px) {
   .desktop-nav, .header-call { display: none; }
   .menu-button { display: block; }
@@ -469,7 +247,6 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
   .about-photo { height: 320px; }
   .photo-strip-grid { grid-template-columns: 1fr; }
   .photo-card, .photo-card img { min-height: 300px; }
-  .jobs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .service-grid { grid-template-columns: 1fr; }
   .hero-content { padding: 48px 0 34px; max-width: 100%; }
   .hero-actions { display: grid; grid-template-columns: 1fr; gap: 12px; }
@@ -477,7 +254,6 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
   .trust-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .trust-row span { font-size: 13px; padding: 9px 10px; white-space: normal; }
 }
-
 @media (max-width: 620px) {
   .container { width: min(100% - 24px, var(--max)); }
   .nav-wrap { min-height: 66px; }
@@ -505,7 +281,6 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
   .review-panel, .contact-panel { padding: 24px 18px; }
   .floating-whatsapp { width: 54px; height: 54px; right: 14px; bottom: 14px; }
 }
-
 @media (max-width: 390px) {
   .brand-title { font-size: 18px; }
   .brand-subtitle { display: none; }
@@ -577,18 +352,18 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
       <div class="section-title">
         <span class="label">What we do</span>
         <h2>Our Services</h2>
-        <p>Vehicle servicing, brake repairs, clutch replacement, engine diagnostics, suspension repairs, steering repairs, battery replacement, exhaust repairs, MOT preparation, fault finding and general mechanical repairs.</p>
+        <p>Vehicle servicing, car servicing, brake repairs, brake pad replacement, car maintenance, vehicle inspection, engine diagnostics, suspension repairs, steering repairs, vehicle battery replacement, exhaust repairs, MOT preparation, fault finding and general mechanical repairs.</p>
       </div>
 
       <div class="service-grid">
-        <article class="card service-card"><div class="service-icon">🔧</div><h3>Vehicle Servicing</h3><p>Full and interim servicing for all makes and models.</p></article>
-        <article class="card service-card"><div class="service-icon">🛞</div><h3>Brakes</h3><p>Brake pads, discs, drums and brake fluid work.</p></article>
+        <article class="card service-card"><div class="service-icon">🔧</div><h3>Vehicle Servicing</h3><p>Full and interim car servicing for all makes and models.</p></article>
+        <article class="card service-card"><div class="service-icon">🛞</div><h3>Brakes</h3><p>Brake repair, brake pad replacement, discs, drums and brake fluid work.</p></article>
         <article class="card service-card"><div class="service-icon">⚙️</div><h3>Clutches</h3><p>Clutch replacement, checks and related mechanical repairs.</p></article>
         <article class="card service-card"><div class="service-icon">🚗</div><h3>Suspension &amp; Steering</h3><p>Diagnosis and repair of handling, steering and suspension issues.</p></article>
         <article class="card service-card"><div class="service-icon">💨</div><h3>Exhausts</h3><p>Exhaust repairs, replacements and fitting.</p></article>
-        <article class="card service-card"><div class="service-icon">🔋</div><h3>Batteries</h3><p>Battery testing, supply and fitting.</p></article>
-        <article class="card service-card"><div class="service-icon">✅</div><h3>MOT Preparation</h3><p>Pre-MOT checks and repairs to help get your vehicle ready.</p></article>
-        <article class="card service-card"><div class="service-icon">💻</div><h3>Engine Diagnostics</h3><p>Fault code reading, diagnostics and practical repair advice.</p></article>
+        <article class="card service-card"><div class="service-icon">🔋</div><h3>Batteries</h3><p>Vehicle battery replacement, battery testing, battery supply and fitting for all makes and models.</p></article>
+        <article class="card service-card"><div class="service-icon">✅</div><h3>MOT Preparation</h3><p>Car inspection, pre-MOT checks and repairs to help get your vehicle ready.</p></article>
+        <article class="card service-card"><div class="service-icon">💻</div><h3>Engine Diagnostics</h3><p>Fault code reading, engine diagnostics and practical repair advice.</p></article>
       </div>
     </div>
   </section>
@@ -596,20 +371,20 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
   <section class="photo-strip" aria-label="Selected recent work photos">
     <div class="container photo-strip-grid">
       <article class="photo-card">
-        <img src="Aston-Martin-service-newton-le-willows.png" alt="Aston Martin servicing by mobile mechanic in Newton-le-Willows">
+        <img src="Aston-Martin-Brake-Pad-Replacement-Newton-le-Willows.png" alt="Aston Martin brake pad replacement by mobile mechanic in Newton-le-Willows">
         <div class="photo-card-caption">
-          <span>Premium Vehicle Work</span>
-          <h3>Aston Martin Servicing</h3>
-          <p>Recent vehicle servicing carried out by Mackie's Mobile Mechanics.</p>
+          <span>Brake Repair</span>
+          <h3>Aston Martin Brake Pad Replacement</h3>
+          <p>Brake repair and brake pad replacement work carried out by Mackie's Mobile Mechanics.</p>
         </div>
       </article>
 
       <article class="photo-card">
-        <img src="air-conditioning-regas-newton-le-willows.png" alt="Air conditioning regas carried out by mobile mechanic in Newton-le-Willows">
+        <img src="Porsche-Car-Maintenance-North-West.jpg" alt="Porsche car maintenance by mobile mechanic in the North West">
         <div class="photo-card-caption">
-          <span>Air Conditioning</span>
-          <h3>Air Con Regas</h3>
-          <p>Air conditioning servicing and regas work for local customers.</p>
+          <span>Car Maintenance</span>
+          <h3>Porsche Vehicle Maintenance</h3>
+          <p>Car maintenance and vehicle servicing for customers across the North West.</p>
         </div>
       </article>
     </div>
@@ -622,7 +397,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
       <div class="about-copy">
         <span class="label">About us</span>
         <h2>Honest. Reliable. Local.</h2>
-        <p>Mackie's Mobile Mechanics is an independent mobile mechanic in Newton-le-Willows, providing vehicle servicing, brake repairs, engine diagnostics and mechanical repairs across Newton-le-Willows, Haydock, Golborne, Warrington and surrounding areas.</p>
+        <p>Mackie's Mobile Mechanics is an independent mobile mechanic in Newton-le-Willows, providing vehicle servicing, brake repairs, brake pad replacement, engine diagnostics, vehicle inspections and mechanical repairs across Newton-le-Willows, Haydock, Golborne, Warrington and surrounding areas.</p>
         <p>The service is built around convenience, honest advice and reliable workmanship, bringing the garage to your home, workplace or roadside where suitable.</p>
 
         <ul class="check-list">
@@ -667,34 +442,34 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
       <div class="section-title">
         <span class="label">Recent Jobs</span>
         <h2>Recent Vehicle Servicing &amp; Repair Work</h2>
-        <p>Recent vehicle servicing, brake repairs, diagnostics, air conditioning regas and commercial vehicle work completed across Newton-le-Willows, Haydock, Golborne, Warrington and surrounding areas.</p>
+        <p>Recent vehicle servicing, brake repairs, brake pad replacement, vehicle inspections, suspension repairs, engine diagnostics, air conditioning regas, car maintenance and commercial vehicle repairs completed across Newton-le-Willows, Haydock, Golborne, Warrington and surrounding areas.</p>
       </div>
 
       <div class="jobs-grid">
         <article class="job-card">
-          <img src="Aston-Martin-service-newton-le-willows.png" alt="Aston Martin servicing by mobile mechanic in Newton-le-Willows">
+          <img src="Aston-Martin-Brake-Pad-Replacement-Newton-le-Willows.png" alt="Brake pad replacement on an Aston Martin in Newton-le-Willows">
           <div class="job-card-body">
-            <span>Vehicle Servicing</span>
-            <h3>Aston Martin Service</h3>
-            <p>Vehicle servicing completed for a local customer, showing careful work on premium vehicles as well as everyday cars and vans.</p>
+            <span>Brake Repair</span>
+            <h3>Brake Pad Replacement</h3>
+            <p>Brake pad replacement and brake repair completed in Newton-le-Willows. Mobile mechanic service covering brake discs, brake pads and vehicle safety inspections.</p>
           </div>
         </article>
 
         <article class="job-card">
-          <img src="ford-ranger-transit-servicing-newton-le-willows.png" alt="Ford Transit servicing by mobile mechanic in Newton-le-Willows">
+          <img src="Mini-brake-pad-replacement-newton-le-willows.png" alt="Brake pad replacement in Newton-le-Willows">
           <div class="job-card-body">
-            <span>Van Servicing</span>
-            <h3>Ford Transit Service</h3>
-            <p>Mobile vehicle servicing and maintenance carried out at the customer location in Newton-le-Willows.</p>
+            <span>Brake Repair</span>
+            <h3>Mini Brake Pad Replacement</h3>
+            <p>Front brake pads and discs replaced for a customer in Newton-le-Willows. Helping maintain braking performance and road safety.</p>
           </div>
         </article>
 
         <article class="job-card">
-          <img src="Renault-Servicing-newton-le-willows.png" alt="Renault vehicle servicing by mobile mechanic in Newton-le-Willows">
+          <img src="car-inspection-warrington.png" alt="Vehicle inspection completed in Warrington">
           <div class="job-card-body">
-            <span>Car Servicing</span>
-            <h3>Renault Service</h3>
-            <p>Routine servicing and maintenance carried out to help keep the vehicle safe, reliable and road-ready.</p>
+            <span>Vehicle Inspection</span>
+            <h3>Car Inspection</h3>
+            <p>Vehicle inspection and car diagnostics carried out in Warrington. Helping local drivers identify faults before costly repairs.</p>
           </div>
         </article>
 
@@ -708,20 +483,38 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
         </article>
 
         <article class="job-card">
-          <img src="commercial-servicing-newton-le-willows.png" alt="Commercial vehicle servicing by mobile mechanic in Newton-le-Willows">
+          <img src="Porsche-Car-Maintenance-North-West.jpg" alt="Porsche vehicle maintenance in the North West">
           <div class="job-card-body">
-            <span>Commercial Vehicles</span>
-            <h3>Commercial Servicing</h3>
-            <p>Commercial vehicle servicing and mechanical repairs for local businesses and working vehicles.</p>
+            <span>Car Maintenance</span>
+            <h3>Vehicle Maintenance</h3>
+            <p>Vehicle maintenance and car servicing completed for a Porsche owner in the North West.</p>
           </div>
         </article>
 
         <article class="job-card">
-          <img src="hgv-servicing-newton-le-willows.png" alt="HGV servicing and commercial vehicle repair by mobile mechanic">
+          <img src="land-rover-suspension-repair-north-west.png" alt="Land Rover suspension repair in the North West">
           <div class="job-card-body">
-            <span>HGV &amp; Fleet Work</span>
-            <h3>HGV Servicing</h3>
-            <p>Servicing and repair support for larger vehicles, vans and commercial work across the local area.</p>
+            <span>Suspension Repair</span>
+            <h3>Suspension &amp; Steering Repair</h3>
+            <p>Suspension and steering repair completed on a Land Rover. Restoring ride quality, handling and vehicle safety.</p>
+          </div>
+        </article>
+
+        <article class="job-card">
+          <img src="HGV Engine Repair St Helens North West.png" alt="HGV engine repair in St Helens">
+          <div class="job-card-body">
+            <span>Engine Repair</span>
+            <h3>HGV Engine Repair</h3>
+            <p>Engine repair work completed on a commercial vehicle in St Helens. Mechanical repairs and diagnostics carried out on-site.</p>
+          </div>
+        </article>
+
+        <article class="job-card">
+          <img src="ford-ranger-transit-servicing-newton-le-willows.png" alt="Ford Transit servicing by mobile mechanic in Newton-le-Willows">
+          <div class="job-card-body">
+            <span>Vehicle Servicing</span>
+            <h3>Ford Transit Service</h3>
+            <p>Mobile vehicle servicing and maintenance carried out at the customer's location in Newton-le-Willows.</p>
           </div>
         </article>
       </div>
@@ -771,13 +564,11 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 <script>
 const menuButton = document.getElementById('menuButton');
 const mobileNav = document.getElementById('mobileNav');
-
 menuButton.addEventListener('click', function () {
   const isOpen = mobileNav.classList.toggle('open');
   menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   menuButton.textContent = isOpen ? '×' : '☰';
 });
-
 mobileNav.querySelectorAll('a').forEach(function (link) {
   link.addEventListener('click', function () {
     mobileNav.classList.remove('open');
