@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Mechanic Warrington | Mackie's Mobile Mechanics</title>
+  <meta name="description" content="Mobile mechanic in Warrington offering vehicle servicing, brake repairs, engine diagnostics, battery replacement and general vehicle repairs at your home or workplace.">
+  <meta property="og:title" content="Mobile Mechanic Warrington | Mackie's Mobile Mechanics">
+  <meta property="og:description" content="Mobile mechanic in Warrington offering vehicle servicing, brake repairs, engine diagnostics, battery replacement and general vehicle repairs at your home or workplace.">
+  <meta property="og:url" content="https://mobilemechanics.net/mobile-mechanic-warrington.html">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mobilemechanics.net/mobile-mechanic-warrington.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <style>
+    :root {
+      --bg: #080808;
+      --panel: #111111;
+      --panel-soft: #171717;
+      --text: #f5f5f5;
+      --muted: #cfcfcf;
+      --red: #e83b3b;
+      --red-dark: #b91f1f;
+      --border: rgba(255,255,255,0.10);
+      --shadow: 0 18px 50px rgba(0,0,0,0.35);
+      --radius: 18px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.94);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .logo-text {
+      display: inline-block;
+      color: #fff;
+      font-size: 1.05rem;
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      display: block;
+      color: var(--red);
+      font-size: 0.82rem;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: #fff;
+      opacity: 0.92;
+    }
+
+    .main-nav a:hover { color: var(--red); }
+
+    .phone-btn, .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      background: var(--red);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 800;
+      box-shadow: 0 10px 26px rgba(232,59,59,0.22);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .phone-btn:hover, .btn:hover {
+      transform: translateY(-1px);
+      background: var(--red-dark);
+    }
+
+    .hero {
+      background:
+        linear-gradient(115deg, rgba(0,0,0,0.92), rgba(0,0,0,0.72)),
+        radial-gradient(circle at 20% 20%, rgba(232,59,59,0.24), transparent 34%),
+        #0b0b0b;
+      padding: 84px 20px 62px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      color: var(--red);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      margin: 0 0 12px;
+      font-size: 0.88rem;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 5vw, 4.6rem);
+      line-height: 1.02;
+      margin: 0 0 20px;
+      max-width: 880px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 1.15rem;
+      color: var(--muted);
+      margin: 0 0 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.25);
+      box-shadow: none;
+    }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 20px 70px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 330px;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--panel), var(--panel-soft));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: clamp(1.45rem, 2.4vw, 2.05rem);
+      line-height: 1.2;
+      margin: 0 0 14px;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin: 22px 0 8px;
+      color: #fff;
+    }
+
+    p { color: var(--muted); margin: 0 0 16px; }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    li { margin: 8px 0; }
+
+    .service-links a, .area-links a {
+      display: inline-block;
+      margin: 6px 8px 6px 0;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255,255,255,0.04);
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .service-links a:hover, .area-links a:hover {
+      border-color: rgba(232,59,59,0.75);
+      color: #fff;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 96px;
+    }
+
+    .cta-box {
+      background: linear-gradient(160deg, rgba(232,59,59,0.22), rgba(17,17,17,1));
+      border: 1px solid rgba(232,59,59,0.35);
+    }
+
+    .cta-box strong {
+      display: block;
+      font-size: 1.18rem;
+      margin-bottom: 10px;
+    }
+
+    .small-note {
+      font-size: 0.92rem;
+      color: #bdbdbd;
+    }
+
+    .faq-item {
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      margin-top: 16px;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: #050505;
+      padding: 26px 20px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 860px) {
+      .main-nav { display: none; }
+      .content-grid { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .phone-btn { padding: 10px 13px; font-size: 0.92rem; }
+      .hero { padding-top: 58px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="logo-link" href="/" aria-label="Mackie's Mobile Mechanics home">
+        <span class="logo-text">Mackie's<span>Mobile Mechanics</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/engine-diagnostics.html">Services</a>
+        <a href="/#about">About</a>
+        <a href="/#areas">Areas</a>
+        <a href="/#reviews">Reviews</a>
+        <a href="/#faqs">FAQs</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+
+      <a class="phone-btn" href="tel:07722092401">☎ 07722 092401</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Mobile mechanic covering Warrington</p>
+      <h1>Mobile Mechanic Warrington</h1>
+      <p>Convenient mobile vehicle repairs, servicing, brake repairs, engine diagnostics and battery replacement at your home, workplace or roadside location across Warrington and nearby areas.</p>
+      <div class="hero-actions">
+        <a class="btn" href="tel:07722092401">Call 07722 092401</a>
+        <a class="btn btn-secondary" href="https://wa.me/447722092401" target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="content-grid">
+      <article>
+        <section class="card">
+          <h2>Mobile Vehicle Repairs in Warrington</h2>
+          <p>Looking for a reliable mobile mechanic in Warrington? Mackie's Mobile Mechanics provides convenient vehicle repairs, servicing and diagnostics at your home, workplace or roadside location across Warrington and the surrounding areas.</p>
+          <p>Instead of spending time arranging transport to a garage, waiting for appointments or sitting in reception areas, we bring our services directly to you. Whether your vehicle needs routine servicing, fault diagnosis, brake repairs or battery replacement, our aim is to provide a professional and convenient service without disrupting your day.</p>
+          <p>We regularly assist motorists throughout Warrington and understand how important it is to keep your vehicle safe, reliable and roadworthy. From family cars and daily commuters to vans and light commercial vehicles, we provide a wide range of mobile mechanic services designed to save time and hassle.</p>
+        </section>
+
+        <section class="card">
+          <h2>Vehicle Servicing Warrington</h2>
+          <p>Regular vehicle servicing is one of the best ways to reduce the likelihood of unexpected breakdowns and expensive repairs. We provide interim and full vehicle servicing throughout Warrington, helping customers maintain their vehicles according to manufacturer recommendations.</p>
+          <p>A typical service may include engine oil and filter replacement, air filter replacement, cabin filter replacement, fluid level checks, brake inspections, battery health checks and a general vehicle inspection.</p>
+          <p>Regular servicing can improve reliability, fuel economy and vehicle lifespan while helping identify potential issues before they become major problems. If your vehicle is due a service and you want the convenience of having the work carried out at your home or workplace, a mobile mechanic can be a practical alternative to visiting a garage.</p>
+          <div class="service-links">
+            <a href="/vehicle-servicing.html">View Vehicle Servicing</a>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Engine Diagnostics Warrington</h2>
+          <p>Modern vehicles rely heavily on electronic systems and warning lights. If your engine management light has appeared or your vehicle is behaving unusually, our mobile diagnostic service can help identify fault codes and point towards potential issues.</p>
+          <p>Common diagnostic investigations include engine management lights, DPF warnings, misfires, starting problems, electrical faults, sensor faults and fuel system issues. Using diagnostic equipment, we can access your vehicle's onboard systems and provide clear information about faults that may be affecting performance or reliability.</p>
+          <p>Vehicle diagnostics are useful when a fault is not immediately obvious. Rather than guessing what might be wrong, diagnostic checks can help narrow down the cause and guide the next step in the repair process.</p>
+          <div class="service-links">
+            <a href="/engine-diagnostics.html">View Engine Diagnostics</a>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Brake Repairs Warrington</h2>
+          <p>Your vehicle's braking system is one of its most important safety components. If you notice squealing, grinding, vibration, warning lights or reduced braking performance, it is important to have the system checked as soon as possible.</p>
+          <p>We provide mobile brake repair services across Warrington, including brake pad replacement, brake disc replacement, brake inspections, brake fault diagnosis and general brake maintenance. Many brake issues can be resolved without needing to visit a traditional garage, helping you get back on the road quickly and safely.</p>
+          <p>Brake problems should never be ignored. Worn brake pads can damage discs if left too long, and unusual noises or vibrations may indicate that parts require inspection or replacement.</p>
+          <div class="service-links">
+            <a href="/brake-repairs.html">View Brake Repairs</a>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Battery Replacement and General Repairs</h2>
+          <p>Flat batteries are one of the most common reasons for vehicle breakdowns. If your vehicle is struggling to start, particularly during colder weather, the battery may require testing or replacement.</p>
+          <p>We can diagnose battery-related problems and carry out replacement where required. In addition to battery services, we also assist with a range of general vehicle repairs and maintenance tasks depending on the make, model and nature of the fault.</p>
+          <p>If you are unsure whether the issue is caused by the battery, alternator, starter motor or another electrical fault, a mobile inspection can help identify the next step.</p>
+          <div class="service-links">
+            <a href="/battery-replacement.html">View Battery Replacement</a>
+            <a href="/clutch-replacement.html">View Clutch Replacement</a>
+          </div>
+        </section>
+
+        <section class="card" id="areas">
+          <h2>Areas We Cover Around Warrington</h2>
+          <p>Although based locally, Mackie's Mobile Mechanics covers a wide area surrounding Warrington. If your location is not listed, feel free to get in touch and we can confirm whether we are able to attend.</p>
+          <div class="area-links" aria-label="Areas covered around Warrington">
+            <a href="#">Warrington Town Centre</a>
+            <a href="#">Great Sankey</a>
+            <a href="#">Penketh</a>
+            <a href="#">Stockton Heath</a>
+            <a href="#">Padgate</a>
+            <a href="#">Birchwood</a>
+            <a href="#">Culcheth</a>
+            <a href="#">Lymm</a>
+            <a href="#">Woolston</a>
+            <a href="#">Appleton</a>
+            <a href="#">Westbrook</a>
+            <a href="#">Burtonwood</a>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Why Choose Mackie's Mobile Mechanics?</h2>
+          <p>Customers choose mobile mechanics because of the convenience and flexibility offered compared with traditional garage visits. Vehicle problems can be stressful, especially when the vehicle is needed for work, school runs or daily travel, so our approach is based around straightforward advice and practical solutions.</p>
+          <ul>
+            <li>Repairs carried out at your home or workplace where suitable</li>
+            <li>No need to arrange transport to and from a garage</li>
+            <li>Convenient booking by phone or WhatsApp</li>
+            <li>Mobile vehicle servicing, diagnostics and repairs</li>
+            <li>Clear communication before work is carried out</li>
+            <li>Coverage across Warrington and surrounding areas</li>
+          </ul>
+        </section>
+
+        <section class="card" id="faqs">
+          <h2>Frequently Asked Questions</h2>
+
+          <div class="faq-item">
+            <h3>Can a mobile mechanic service my car at home?</h3>
+            <p>Yes. Many routine servicing and repair tasks can be completed safely and professionally at your home or workplace, depending on the job, vehicle and location.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Do you cover all of Warrington?</h3>
+            <p>We cover most areas of Warrington and surrounding locations. If you are unsure whether your area is covered, contact Mackie's Mobile Mechanics and we can confirm availability.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Can you diagnose engine warning lights?</h3>
+            <p>Yes. We provide engine diagnostics using diagnostic equipment to help identify fault codes and potential issues linked to warning lights and vehicle running problems.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Can a mobile mechanic repair brakes?</h3>
+            <p>Many brake repairs can be carried out by a mobile mechanic, including brake pad replacement, brake disc replacement and brake checks, depending on the vehicle and working conditions.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>How do I book an appointment?</h3>
+            <p>You can contact Mackie's Mobile Mechanics by phone or WhatsApp to discuss your vehicle, explain the issue and arrange a suitable booking.</p>
+          </div>
+        </section>
+
+        <section class="card cta-box" id="contact">
+          <h2>Contact Mackie's Mobile Mechanics</h2>
+          <p>If you are looking for a mobile mechanic in Warrington, whether you require vehicle servicing, engine diagnostics, brake repairs, battery replacement or general vehicle repairs, get in touch today.</p>
+          <p>We provide convenient mobile vehicle repairs across Warrington and surrounding areas, helping keep your vehicle safe, reliable and ready for the road.</p>
+          <a class="btn" href="tel:07722092401">Call 07722 092401</a>
+          <a class="btn btn-secondary" href="https://wa.me/447722092401" target="_blank" rel="noopener">Message on WhatsApp</a>
+        </section>
+      </article>
+
+      <aside class="sidebar" aria-label="Quick contact and services">
+        <section class="card cta-box">
+          <strong>Need a mobile mechanic in Warrington?</strong>
+          <p>Call or WhatsApp Mackie's Mobile Mechanics to discuss vehicle servicing, diagnostics, brake repairs, batteries and general repairs.</p>
+          <a class="btn" href="tel:07722092401">Call Now</a>
+          <p class="small-note">Covering Warrington, Great Sankey, Penketh, Stockton Heath, Padgate, Birchwood and nearby areas.</p>
+        </section>
+
+        <section class="card">
+          <h2>Services</h2>
+          <div class="service-links">
+            <a href="/engine-diagnostics.html">Engine Diagnostics</a>
+            <a href="/brake-repairs.html">Brake Repairs</a>
+            <a href="/vehicle-servicing.html">Vehicle Servicing</a>
+            <a href="/battery-replacement.html">Battery Replacement</a>
+            <a href="/clutch-replacement.html">Clutch Replacement</a>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Mackie's Mobile Mechanics - Mobile mechanic covering Newton-le-Willows, Warrington, St Helens and surrounding areas.</p>
+  </footer>
+</body>
+</html>
