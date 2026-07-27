@@ -222,7 +222,18 @@ section { padding: 78px 0; border-top: 1px solid rgba(255,255,255,0.06); }
 
 .areas { background: #121212; }
 .area-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; max-width: 980px; margin: 0 auto; }
-.area-pill { border: 1px solid var(--line); background: #191919; border-radius: 999px; padding: 14px 18px; text-align: center; color: #eeeeee; font-weight: 900; }
+.area-pill {
+    border: 1px solid var(--line);
+    background: #191919;
+    border-radius: 999px;
+    padding: 14px 18px;
+    text-align: center;
+    color: #eeeeee;
+    font-weight: 900;
+
+    text-decoration: none;
+    display: block;
+}
 
 /* Recent Jobs */
 .recent-jobs { background: #0c0c0c; }
@@ -846,7 +857,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
         <div class="area-pill">Earlestown</div>
         <div class="area-pill">Haydock</div>
         <div class="area-pill">Golborne</div>
-        <div class="area-pill">Warrington</div>
+        <a href="mobile-mechanic-warrington.html" class="area-pill">Warrington</a>
         <div class="area-pill">St Helens</div>
         <div class="area-pill">Lowton</div>
         <div class="area-pill">Ashton-in-Makerfield</div>
