@@ -9,6 +9,18 @@
   "image": "https://mobilemechanics.net/Mackies-Mobile-Mechanics-Logo.png",
   "telephone": "07722 092401",
   "url": "https://mobilemechanics.net/",
+  "priceRange": "££",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Newton-le-Willows",
+    "addressRegion": "Merseyside",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.4508,
+    "longitude": -2.63
+  },
   "areaServed": [
     "Newton-le-Willows",
     "Haydock",
@@ -23,6 +35,34 @@
     "Burtonwood",
     "Croft"
   ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "16:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "54",
+    "bestRating": "5"
+  },
   "serviceType": [
     "Mobile mechanic",
     "Vehicle servicing",
@@ -697,22 +737,31 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 .menu-panel a:hover { background: rgba(215,38,46,0.16); color: #fff; }
 .menu-heading { display: block; padding: 8px 14px 4px; color: var(--accent); font-size: 11px; font-weight: 1000; letter-spacing: 1.6px; text-transform: uppercase; }
 .menu-divider { display: block; height: 1px; background: var(--line); margin: 6px 8px; }
-
 @media (max-width: 620px) { .header-call { display: none; } .menu-panel { width: 240px; } }
+
+.contact-form { max-width: 640px; margin: 26px auto 0; display: grid; gap: 14px; text-align: left; }
+.contact-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.contact-form label { display: block; font-size: 13px; font-weight: 800; letter-spacing: 0.4px; margin-bottom: 6px; color: #dcdcdc; text-transform: uppercase; }
+.contact-form input, .contact-form textarea { width: 100%; background: #101010; border: 1px solid var(--line); border-radius: 10px; padding: 13px 14px; color: #fff; font-family: inherit; font-size: 15px; }
+.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent); }
+.contact-form textarea { min-height: 120px; resize: vertical; }
+.contact-form .btn { width: 100%; font-size: 16px; }
+.form-note { color: #9a9a9a; font-size: 12.5px; text-align: center; margin-top: 4px; }
+@media (max-width: 560px) { .contact-form .row { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 <header class="site-header">
   <div class="container nav-wrap">
     <a class="brand brand-logo-link" href="index.html#top" aria-label="Mackie's Mobile Mechanics home">
-      <img src="Mackies-Mobile-Mechanics-Logo.png" alt="Mackie's Mobile Mechanics mobile mechanic logo" class="site-logo" width="320" height="90">
+      <img src="Mackies-Mobile-Mechanics-Logo.png" alt="Mackie's Mobile Mechanics mobile mechanic logo" class="site-logo" width="320" height="90" fetchpriority="high" decoding="async">
     </a>
     <div class="header-actions">
       <div class="menu-dropdown">
         <button class="menu-toggle" id="menuToggle" type="button" aria-haspopup="true" aria-expanded="false">
           <span class="menu-toggle-bars">&#9776;</span> Menu
         </button>
-                <div class="menu-panel" id="menuPanel" role="menu" aria-label="Site menu">
+        <div class="menu-panel" id="menuPanel" role="menu" aria-label="Site menu">
           <span class="menu-heading">Pages</span>
           <a href="index.html" role="menuitem">Home</a>
           <a href="engine-diagnostics.html" role="menuitem">Engine Diagnostics</a>
@@ -751,7 +800,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 
       <div class="trust-row" aria-label="Key benefits">
         <span>4.9★ Google Rating</span>
-        <span>53 Google Reviews</span>
+        <span>54 Google Reviews</span>
         <span>All Makes &amp; Models</span>
         <span>Local &amp; Reliable</span>
       </div>
@@ -782,7 +831,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
   <section class="photo-strip" aria-label="Selected recent work photos">
     <div class="container photo-strip-grid">
       <article class="photo-card">
-       <img src="Aston-Martin-Brake-Pad-Replacement-Newton-le-willows.png" alt="Aston Martin brake pad replacement by mobile mechanic in Newton-le-Willows">
+       <img src="Aston-Martin-Brake-Pad-Replacement-Newton-le-willows.png" alt="Aston Martin brake pad replacement by mobile mechanic in Newton-le-Willows" fetchpriority="high" decoding="async">
         <div class="photo-card-caption">
           <span>Brake Repair</span>
           <h3>Aston Martin Brake Pad Replacement</h3>
@@ -791,7 +840,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
       </article>
 
       <article class="photo-card">
-        <img src="Porsche-Car-Maintenance-North-West.jpg" alt="Porsche car maintenance by mobile mechanic in the North West">
+        <img src="Porsche-Car-Maintenance-North-West.jpg" alt="Porsche car maintenance by mobile mechanic in the North West" loading="lazy" decoding="async">
         <div class="photo-card-caption">
           <span>Car Maintenance</span>
           <h3>Porsche Vehicle Maintenance</h3>
@@ -803,7 +852,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 
   <section id="about">
     <div class="container about-wrap">
-      <img src="ford-ranger-transit-servicing-newton-le-willows.png" alt="Mobile mechanic servicing a Ford Transit in Newton-le-Willows" class="about-photo">
+      <img src="ford-ranger-transit-servicing-newton-le-willows.png" alt="Mobile mechanic servicing a Ford Transit in Newton-le-Willows" class="about-photo" loading="lazy" decoding="async">
 
       <div class="about-copy">
         <span class="label">About us</span>
@@ -858,7 +907,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 <div class="jobs-grid">
   
   <article class="job-card">
-    <img src="engine-replacement-removal-recondition-north-west.png" alt="Engine replacement and reconditioning completed in the North West">
+    <img src="engine-replacement-removal-recondition-north-west.png" alt="Engine replacement and reconditioning completed in the North West" loading="lazy" decoding="async">
     <div class="job-card-body">
       <span>Engine Replacement</span>
       <h3>Engine Replacement & Reconditioning – North West</h3>
@@ -867,7 +916,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
   </article>
 
   <article class="job-card">
-  <img src="turbo-replacement-removal-st-helens-warrington.png" alt="Turbo replacement and turbocharger removal in St Helens and Warrington">
+  <img src="turbo-replacement-removal-st-helens-warrington.png" alt="Turbo replacement and turbocharger removal in St Helens and Warrington" loading="lazy" decoding="async">
   <div class="job-card-body">
     <span>Turbo Replacement</span>
     <h3>Turbo Replacement – St Helens & Warrington</h3>
@@ -878,7 +927,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 </article>
   
 <article class="job-card">
-  <img src="clutch-replacement-removal-warrington-st-helens.png" alt="Clutch replacement completed in Warrington and St Helens">
+  <img src="clutch-replacement-removal-warrington-st-helens.png" alt="Clutch replacement completed in Warrington and St Helens" loading="lazy" decoding="async">
 
   <div class="job-card-body">
     <span>Clutch Replacement</span>
@@ -892,7 +941,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 </article>
 
   <article class="job-card">
-  <img src="engine-diagnostics-fault-finding-newton-le-willows-warrington.png" alt="Engine diagnostics and fault finding service in Newton-le-Willows and Warrington">
+  <img src="engine-diagnostics-fault-finding-newton-le-willows-warrington.png" alt="Engine diagnostics and fault finding service in Newton-le-Willows and Warrington" loading="lazy" decoding="async">
 
   <div class="job-card-body">
     <span>Engine Diagnostics</span>
@@ -906,7 +955,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 </article>
   
         <article class="job-card">
-          <img src="Aston-Martin-Brake-Pad-Replacement-Newton-le-willows.png" alt="Brake pad replacement on an Aston Martin in Newton-le-Willows">
+          <img src="Aston-Martin-Brake-Pad-Replacement-Newton-le-willows.png" alt="Brake pad replacement on an Aston Martin in Newton-le-Willows" loading="lazy" decoding="async">
           <div class="job-card-body">
             <span>Brake Repair</span>
             <h3>Brake Pad Replacement</h3>
@@ -915,7 +964,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
         </article>
 
         <article class="job-card">
-  <img src="Sankey-Valley-Tyres-Battery-Replacement-Service-Breakdown.png" alt="Vehicle battery replacement and breakdown assistance in Newton-le-Willows">
+  <img src="Sankey-Valley-Tyres-Battery-Replacement-Service-Breakdown.png" alt="Vehicle battery replacement and breakdown assistance in Newton-le-Willows" loading="lazy" decoding="async">
   <div class="job-card-body">
     <span>Vehicle Battery Replacement</span>
     <h3>Vehicle Battery Replacement & Breakdown Assistance</h3>
@@ -924,7 +973,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 </article>
 
         <article class="job-card">
-          <img src="Mini-brake-pad-replacement-newton-le-willows.png" alt="Brake pad replacement in Newton-le-Willows">
+          <img src="Mini-brake-pad-replacement-newton-le-willows.png" alt="Brake pad replacement in Newton-le-Willows" loading="lazy" decoding="async">
           <div class="job-card-body">
             <span>Brake Repair</span>
             <h3>Mini Brake Pad Replacement</h3>
@@ -933,7 +982,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
         </article>
 
         <article class="job-card">
-          <img src="car-inspection-warrington.png" alt="Vehicle inspection completed in Warrington">
+          <img src="car-inspection-warrington.png" alt="Vehicle inspection completed in Warrington" loading="lazy" decoding="async">
           <div class="job-card-body">
             <span>Vehicle Inspection</span>
             <h3>Car Inspection</h3>
@@ -942,7 +991,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
         </article>
 
         <article class="job-card">
-          <img src="air-conditioning-regas-newton-le-willows.png" alt="Air conditioning regas in Newton-le-Willows">
+          <img src="air-conditioning-regas-newton-le-willows.png" alt="Air conditioning regas in Newton-le-Willows" loading="lazy" decoding="async">
           <div class="job-card-body">
             <span>Air Conditioning</span>
             <h3>Air Conditioning Regas</h3>
@@ -951,7 +1000,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
         </article>
 
         <article class="job-card">
-          <img src="Porsche-Car-Maintenance-North-West.jpg" alt="Porsche vehicle maintenance in the North West">
+          <img src="Porsche-Car-Maintenance-North-West.jpg" alt="Porsche vehicle maintenance in the North West" loading="lazy" decoding="async">
           <div class="job-card-body">
             <span>Car Maintenance</span>
             <h3>Vehicle Maintenance</h3>
@@ -960,7 +1009,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
         </article>
 
         <article class="job-card">
-          <img src="land-rover-suspension-repair-north-west.png" alt="Land Rover suspension repair in the North West">
+          <img src="land-rover-suspension-repair-north-west.png" alt="Land Rover suspension repair in the North West" loading="lazy" decoding="async">
           <div class="job-card-body">
             <span>Suspension Repair</span>
             <h3>Suspension &amp; Steering Repair</h3>
@@ -969,7 +1018,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
         </article>
 
         <article class="job-card">
-          <img src="HGV Engine Repair St Helens North West.png" alt="HGV engine repair in St Helens">
+          <img src="hgv-engine-repair-st-helens.png" alt="HGV engine repair in St Helens" loading="lazy" decoding="async">
           <div class="job-card-body">
             <span>Engine Repair</span>
             <h3>HGV Engine Repair</h3>
@@ -1158,8 +1207,34 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
       <div class="section-title">
         <span class="label">Contact us</span>
         <h2>Get In Touch</h2>
-        <p>Call, WhatsApp or check the Google reviews before getting in touch.</p>
+        <p>Call, WhatsApp, send a quick enquiry below, or check the Google reviews before getting in touch.</p>
       </div>
+
+      <form class="contact-form" action="https://formsubmit.co/YOUR-EMAIL@example.com" method="POST">
+        <input type="hidden" name="_subject" value="New enquiry from mobilemechanics.net">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <div class="row">
+          <div>
+            <label for="cf-name">Name</label>
+            <input id="cf-name" type="text" name="name" required autocomplete="name">
+          </div>
+          <div>
+            <label for="cf-phone">Phone</label>
+            <input id="cf-phone" type="tel" name="phone" required autocomplete="tel">
+          </div>
+        </div>
+        <div>
+          <label for="cf-vehicle">Vehicle (make / model)</label>
+          <input id="cf-vehicle" type="text" name="vehicle">
+        </div>
+        <div>
+          <label for="cf-message">How can we help?</label>
+          <textarea id="cf-message" name="message" required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Send enquiry</button>
+        <p class="form-note">We aim to reply the same working day. Prefer to talk? Call or WhatsApp 07722 092401.</p>
+      </form>
 
       <div class="contact-panel">
         <a class="btn btn-primary" href="tel:07722092401">☎ Call 07722 092401</a>

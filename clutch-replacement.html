@@ -669,6 +669,19 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
   h1 { font-size: 34px; }
   .trust-row { grid-template-columns: 1fr; }
 }
+
+.header-actions { display: flex; align-items: center; gap: 14px; margin-left: auto; }
+.menu-dropdown { position: relative; }
+.menu-toggle { display: inline-flex; align-items: center; gap: 9px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.28); color: #fff; font-weight: 900; text-transform: uppercase; letter-spacing: 0.8px; font-size: 14px; padding: 12px 20px; border-radius: 10px; cursor: pointer; font-family: inherit; min-height: 46px; }
+.menu-toggle:hover { border-color: var(--accent); background: rgba(215,38,46,0.14); }
+.menu-toggle-bars { font-size: 18px; line-height: 1; }
+.menu-panel { display: none; position: absolute; right: 0; top: calc(100% + 12px); width: 290px; background: #121212; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 10px; z-index: 2000; }
+.menu-panel.open { display: grid; gap: 4px; }
+.menu-panel a { display: block; padding: 13px 14px; border-radius: 9px; color: #e8e8e8; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px; }
+.menu-panel a:hover { background: rgba(215,38,46,0.16); color: #fff; }
+.menu-heading { display: block; padding: 8px 14px 4px; color: var(--accent); font-size: 11px; font-weight: 1000; letter-spacing: 1.6px; text-transform: uppercase; }
+.menu-divider { display: block; height: 1px; background: var(--line); margin: 6px 8px; }
+@media (max-width: 620px) { .header-call { display: none; } .menu-panel { width: 240px; } }
 </style>
 <script type="application/ld+json">
 {
@@ -728,51 +741,34 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 <header class="site-header">
   <div class="container nav-wrap">
     <a class="brand brand-logo-link" href="index.html#top" aria-label="Mackie's Mobile Mechanics home">
-      <img src="Mackies-Mobile-Mechanics-Logo.png" alt="Mackie's Mobile Mechanics" class="site-logo">
+      <img src="Mackies-Mobile-Mechanics-Logo.png" alt="Mackie's Mobile Mechanics mobile mechanic logo" class="site-logo" width="320" height="90" fetchpriority="high" decoding="async">
     </a>
-    <nav class="desktop-nav" aria-label="Main navigation">
-      
-<div class="nav-dropdown">
-  <button class="nav-dropbtn" type="button">Services ▾</button>
-  <div class="nav-dropdown-menu">
-    <a href="index.html#services">All Services</a>
-    <a href="engine-diagnostics.html">Engine Diagnostics</a>
-    <a href="clutch-replacement.html">Clutch Replacement</a>
-    <a href="brake-repairs.html">Brake Repairs</a>
-    <a href="vehicle-servicing.html">Vehicle Servicing</a>
-    <a href="battery-replacement.html">Battery Replacement</a>
-  </div>
-</div>
-      <a href="index.html#about">About</a>
-      <a href="index.html#areas">Areas</a>
-      <a href="index.html#recent-jobs">Recent Jobs</a>
-      <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#faq">FAQs</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
-    <a class="btn btn-primary btn-small header-call" href="tel:07722092401">☎ 07722 092401</a>
-    <button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button>
-  </div>
-  <div class="container mobile-nav" id="mobileNav">
-    
-<details class="mobile-services-dropdown">
-  <summary>Services</summary>
-  <div class="mobile-services-menu">
-    <a href="index.html#services">All Services</a>
-    <a href="engine-diagnostics.html">Engine Diagnostics</a>
-    <a href="clutch-replacement.html">Clutch Replacement</a>
-    <a href="brake-repairs.html">Brake Repairs</a>
-    <a href="vehicle-servicing.html">Vehicle Servicing</a>
-    <a href="battery-replacement.html">Battery Replacement</a>
-  </div>
-</details>
-    <a href="index.html#about">About</a>
-    <a href="index.html#areas">Areas</a>
-    <a href="index.html#recent-jobs">Recent Jobs</a>
-    <a href="index.html#reviews">Reviews</a>
-    <a href="index.html#faq">FAQs</a>
-    <a href="index.html#contact">Contact</a>
-    <a class="btn btn-primary" href="tel:07722092401">☎ Call 07722 092401</a>
+    <div class="header-actions">
+      <div class="menu-dropdown">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-haspopup="true" aria-expanded="false">
+          <span class="menu-toggle-bars">&#9776;</span> Menu
+        </button>
+        <div class="menu-panel" id="menuPanel" role="menu" aria-label="Site menu">
+          <span class="menu-heading">Pages</span>
+          <a href="index.html" role="menuitem">Home</a>
+          <a href="engine-diagnostics.html" role="menuitem">Engine Diagnostics</a>
+          <a href="clutch-replacement.html" role="menuitem">Clutch Replacement</a>
+          <a href="brake-repairs.html" role="menuitem">Brake Repairs</a>
+          <a href="vehicle-servicing.html" role="menuitem">Vehicle Servicing</a>
+          <a href="battery-replacement.html" role="menuitem">Battery Replacement</a>
+          <a href="mobile-mechanic-warrington.html" role="menuitem">Mobile Mechanic Warrington</a>
+          <span class="menu-divider" role="separator"></span>
+          <span class="menu-heading">More</span>
+          <a href="index.html#about" role="menuitem">About</a>
+          <a href="index.html#areas" role="menuitem">Areas Covered</a>
+          <a href="index.html#recent-jobs" role="menuitem">Recent Jobs</a>
+          <a href="index.html#reviews" role="menuitem">Reviews</a>
+          <a href="index.html#faq" role="menuitem">FAQs</a>
+          <a href="index.html#contact" role="menuitem">Contact</a>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-small header-call" href="tel:07722092401">&#9742; 07722 092401</a>
+    </div>
   </div>
 </header>
 
@@ -794,6 +790,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
     <div class="container service-layout">
       <article class="service-main">
         <h2>What is Clutch Replacement?</h2>
+        <p><strong>Clutch jobs are one of the most common repairs we carry out across the Newton-le-Willows and Warrington area, and we always confirm the fault before quoting.</strong></p>
         <p>A clutch allows the engine and gearbox to connect smoothly when moving away and changing gear. Over time, the clutch friction material and related components can wear, leading to slipping, juddering, difficulty selecting gears or a high biting point.</p>
 
         <h3>Common symptoms</h3>
@@ -843,19 +840,22 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 </footer>
 <a class="floating-whatsapp" href="https://wa.me/447722092401" target="_blank" rel="noopener" aria-label="Message Mackie's Mobile Mechanics on WhatsApp"><svg class="floating-whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
 <script>
-const menuButton = document.getElementById('menuButton');
-const mobileNav = document.getElementById('mobileNav');
-menuButton.addEventListener('click', function () {
-  const isOpen = mobileNav.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  menuButton.textContent = isOpen ? '×' : '☰';
+const menuToggle = document.getElementById('menuToggle');
+const menuPanel = document.getElementById('menuPanel');
+menuToggle.addEventListener('click', function (e) {
+  e.stopPropagation();
+  const open = menuPanel.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
-mobileNav.querySelectorAll('a').forEach(function (link) {
-  link.addEventListener('click', function () {
-    mobileNav.classList.remove('open');
-    menuButton.setAttribute('aria-expanded', 'false');
-    menuButton.textContent = '☰';
-  });
+document.addEventListener('click', function () {
+  menuPanel.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded', 'false');
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    menuPanel.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }
 });
 </script>
 </body>
