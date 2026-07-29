@@ -26,6 +26,7 @@
   "serviceType": "Engine Diagnostics"
 }
 </script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Engine Diagnostics Newton-le-Willows | Mackie&#x27;s Mobile Mechanics</title>
@@ -42,11 +43,11 @@
 <meta name="twitter:image" content="https://mobilemechanics.net/social-share.jpg">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://mobilemechanics.net/engine-diagnostics.html">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="/favicon.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+/favicon.ico
+/favicon.png
+/apple-touch-icon.png
+
 <style>
-  
 :root {
   --bg: #080808;
   --panel: #151515;
@@ -60,11 +61,34 @@
   --shadow: 0 18px 45px rgba(0,0,0,0.36);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 86px; }
-body { font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
-a { color: inherit; text-decoration: none; }
-.container { width: min(var(--max), calc(100% - 28px)); margin: 0 auto; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 86px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(var(--max), calc(100% - 28px));
+  margin: 0 auto;
+}
 
 .btn {
   display: inline-flex;
@@ -82,16 +106,52 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.1;
   text-align: center;
 }
-.btn:hover { transform: translateY(-2px); }
-.btn-primary { background: var(--accent); color: #ffffff; }
-.btn-primary:hover { background: #b91f1f; }
-.btn-outline { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.28); color: #fff; }
-.btn-outline:hover { border-color: var(--accent); background: rgba(215,38,46,0.10); }
-.btn-whatsapp { background: var(--whatsapp); color: #ffffff; }
-.wa-icon { width: 20px; height: 20px; flex: 0 0 auto; }
-.floating-whatsapp-icon { width: 30px; height: 30px; display: block; }
 
-.btn-small { min-height: 44px; padding: 12px 18px; }
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #b91f1f;
+}
+
+.btn-outline {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.28);
+  color: #fff;
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  background: rgba(215,38,46,0.10);
+}
+
+.btn-whatsapp {
+  background: var(--whatsapp);
+  color: #ffffff;
+}
+
+.wa-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+
+.floating-whatsapp-icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.btn-small {
+  min-height: 44px;
+  padding: 12px 18px;
+}
 
 /* Header */
 .site-header {
@@ -103,8 +163,22 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 8px 22px rgba(0,0,0,0.28);
   backdrop-filter: blur(10px);
 }
-.nav-wrap { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.brand { display: flex; align-items: center; gap: 13px; white-space: nowrap; }
+
+.nav-wrap {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  white-space: nowrap;
+}
+
 .brand-logo-link {
   display: flex;
   align-items: center;
@@ -118,30 +192,134 @@ a { color: inherit; text-decoration: none; }
   object-fit: contain;
   box-shadow: 0 6px 18px rgba(0,0,0,0.28);
 }
-.brand-icon {
-  width: 48px;
-  height: 48px;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: var(--accent);
-  font-size: 24px;
-  box-shadow: inset 0 0 0 5px rgba(215,38,46,0.13);
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: auto;
 }
-.brand-title { display: block; font-size: 28px; line-height: 1; font-weight: 1000; text-transform: uppercase; letter-spacing: -1px; }
-.brand-subtitle { display: block; margin-top: 4px; color: #dedede; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 800; }
-.desktop-nav { display: flex; gap: 26px; align-items: center; justify-content: center; margin-left: auto; margin-right: auto; }
-.desktop-nav a { color: #dddddd; font-size: 14px; letter-spacing: 0.8px; font-weight: 900; text-transform: uppercase; }
-.desktop-nav a:hover { color: #fff; }
-.menu-button { display: none; background: none; border: 0; color: #fff; font-size: 30px; cursor: pointer; }
-.mobile-nav { display: none; padding: 12px 0 18px; border-top: 1px solid var(--line); }
-.mobile-nav.open { display: block; }
-.mobile-nav a { display: block; padding: 12px 0; font-weight: 900; color: #e2e2e2; text-transform: uppercase; letter-spacing: 0.8px; }
-.mobile-nav .btn { margin-top: 10px; width: 100%; }
+
+.menu-dropdown {
+  position: relative;
+}
+
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.28);
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  min-height: 46px;
+}
+
+.menu-toggle:hover {
+  border-color: var(--accent);
+  background: rgba(215,38,46,0.14);
+}
+
+.menu-toggle-bars {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.menu-panel {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 12px);
+  width: 280px;
+  background: #121212;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 10px;
+  z-index: 2000;
+}
+
+.menu-panel.open {
+  display: grid;
+  gap: 4px;
+}
+
+.menu-panel a {
+  display: block;
+  padding: 13px 14px;
+  border-radius: 9px;
+  color: #e8e8e8;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.menu-panel a:hover {
+  background: rgba(215,38,46,0.16);
+  color: #fff;
+}
+
+.menu-submenu {
+  border-top: 1px solid var(--line);
+  margin-top: 4px;
+  padding-top: 4px;
+}
+
+.menu-submenu summary {
+  display: block;
+  padding: 13px 14px;
+  border-radius: 9px;
+  color: #e8e8e8;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.menu-submenu summary::-webkit-details-marker {
+  display: none;
+}
+
+.menu-submenu summary:hover {
+  background: rgba(215,38,46,0.16);
+  color: #fff;
+}
+
+.submenu-links {
+  display: grid;
+  gap: 2px;
+  padding-bottom: 8px;
+}
+
+.submenu-links a {
+  display: block;
+  padding: 10px 14px 10px 28px;
+  border-radius: 8px;
+  color: #d0d0d0;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.submenu-links a:hover {
+  background: rgba(215,38,46,0.16);
+  color: #fff;
+}
 
 /* Hero */
-.hero {
+.hero,
+.service-hero {
   position: relative;
   min-height: auto;
   display: grid;
@@ -149,583 +327,331 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   isolation: isolate;
   background:
-    linear-gradient(90deg, rgba(0,0,0,0.94) 0%, rgba(0,0,0,0.76) 48%, rgba(0,0,0,0.56) 100%),
-    radial-gradient(circle at 82% 45%, rgba(215,38,46,0.26), transparent 0 22%, transparent 42%),
-    linear-gradient(135deg, #111 0%, #181818 42%, #2a0406 100%);
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
-  background-size: 70px 70px;
-  opacity: 0.85;
-}
-.hero-content { max-width: 980px; padding: 72px 0 66px; }
-.eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-weight: 1000; }
-.eyebrow::before { content: ""; width: 36px; height: 2px; background: var(--accent); }
-h1 { font-size: clamp(45px, 6.4vw, 86px); line-height: 0.94; letter-spacing: -2px; text-transform: uppercase; font-weight: 1000; margin-bottom: 22px; }
-.orange { color: var(--accent); }
-.hero p { max-width: 760px; color: #efefef; font-size: clamp(18px, 2vw, 22px); margin-bottom: 30px; }
-.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 30px; }
-.trust-row { display: flex; gap: 12px; flex-wrap: wrap; }
-.trust-row span { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; color: #eeeeee; padding: 10px 14px; font-weight: 900; font-size: 14px; }
-.trust-row span::before { content: "✓"; color: var(--accent); font-weight: 1000; }
-
-/* Sections */
-section { padding: 78px 0; border-top: 1px solid rgba(255,255,255,0.06); }
-.section-title { max-width: 860px; margin: 0 auto 42px; text-align: center; }
-.section-title .label { display: block; margin-bottom: 9px; color: var(--accent); font-size: 13px; font-weight: 1000; letter-spacing: 2px; text-transform: uppercase; }
-.section-title h2 { font-size: clamp(34px, 4vw, 56px); line-height: 1; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 18px; }
-.section-title p { color: var(--muted); font-size: 18px; }
-
-.services { background: #101010; }
-.service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
-.card { background: linear-gradient(180deg, #1a1a1a, #141414); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: 0 10px 26px rgba(0,0,0,0.16); }
-.service-card { min-height: 176px; transition: transform 0.18s ease, border-color 0.18s ease; }
-.service-card:hover { transform: translateY(-4px); border-color: rgba(215,38,46,0.72); }
-.service-icon { color: var(--accent); font-size: 32px; margin-bottom: 16px; }
-.service-card h3, .card h3 { font-size: 20px; line-height: 1.2; margin-bottom: 12px; text-transform: uppercase; }
-.service-card p, .card p { color: var(--muted); }
-
-/* Feature photo strip */
-.photo-strip { background: #0c0c0c; padding-top: 66px; padding-bottom: 66px; }
-.photo-strip-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
-.photo-card { position: relative; overflow: hidden; border-radius: 20px; border: 1px solid var(--line); min-height: 340px; background: #111; box-shadow: var(--shadow); }
-.photo-card img { width: 100%; height: 100%; min-height: 340px; object-fit: cover; display: block; filter: saturate(1.05) contrast(1.03); }
-.photo-card-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.88)); }
-.photo-card-caption span { display: block; color: var(--accent); font-size: 12px; font-weight: 1000; letter-spacing: 1.8px; text-transform: uppercase; margin-bottom: 5px; }
-.photo-card-caption h3 { font-size: 26px; line-height: 1.05; text-transform: uppercase; margin-bottom: 7px; }
-.photo-card-caption p { color: #e6e6e6; font-size: 15px; }
-
-.about-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
-.about-photo { width: 100%; height: 430px; object-fit: cover; border-radius: 20px; border: 1px solid var(--line); box-shadow: var(--shadow); }
-.about-copy .label { color: var(--accent); font-size: 13px; letter-spacing: 2px; font-weight: 1000; text-transform: uppercase; margin-bottom: 10px; display: block; }
-.about-copy h2 { font-size: clamp(34px, 4vw, 58px); line-height: 0.98; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 22px; }
-.about-copy p { color: #dedede; font-size: 18px; margin-bottom: 24px; }
-.check-list { list-style: none; display: grid; gap: 12px; margin: 24px 0 30px; }
-.check-list li { display: flex; gap: 12px; align-items: flex-start; color: #eeeeee; font-weight: 850; }
-.check-list li::before { content: "✓"; min-width: 23px; height: 23px; border-radius: 50%; border: 2px solid var(--accent); display: inline-grid; place-items: center; color: var(--accent); font-weight: 1000; font-size: 12px; margin-top: 2px; }
-
-.areas { background: #121212; }
-.area-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; max-width: 980px; margin: 0 auto; }
-.area-pill { border: 1px solid var(--line); background: #191919; border-radius: 999px; padding: 14px 18px; text-align: center; color: #eeeeee; font-weight: 900; }
-
-/* Recent Jobs */
-.recent-jobs { background: #0c0c0c; }
-.jobs-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
-.job-card { background: linear-gradient(180deg, #1a1a1a, #121212); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.24); }
-.job-card img { width: 100%; height: 245px; object-fit: cover; display: block; }
-.job-card-body { padding: 20px; }
-.job-card-body span { display: block; color: var(--accent); font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase; font-weight: 1000; margin-bottom: 7px; }
-.job-card-body h3 { font-size: 21px; text-transform: uppercase; line-height: 1.13; margin-bottom: 9px; }
-.job-card-body p { color: var(--muted); font-size: 15px; }
-
-.reviews { background: #090909; }
-
-.reviews-container{
-  display:grid;
-  grid-template-columns:320px 1fr;
-  gap:30px;
-  align-items:start;
-}
-
-.review-summary{
-  background:#151515;
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:16px;
-  padding:30px;
-  text-align:center;
-}
-
-.rating-score{
-  font-size:90px;
-  font-weight:900;
-  line-height:1;
-  margin-bottom:10px;
-}
-
-.rating-stars{
-  font-size:26px;
-  color:#f5c542;
-  margin-bottom:10px;
-}
-
-.rating-count{
-  color:#c7c7c7;
-  margin-bottom:20px;
-} 
-
-.review-card{
-  background:#151515;
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:16px;
-  padding:20px;
-}
-
-.review-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-} 
-  @media (max-width: 900px){
-
-  .reviews-container{
-    grid-template-columns:1fr;
-  }
-
-  .review-grid{
-    grid-template-columns:1fr;
-  }
-
-}
-
-.review-card p{
-  margin-bottom:15px;
-}
-
-.review-card span{
-  color:#ffffff;
-  font-size:14px;
-  font-weight:700;
-}
-
-.review-stars{
-  color:#f5c542;
-  margin-bottom:10px;
-}
-
-.review-panel {
-  max-width: 880px;
-  margin: 0 auto;
-  text-align: center;
-  background: linear-gradient(180deg, #1a1a1a, #131313);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-  padding: 40px 28px;
-}
-.stars { color: var(--accent); font-size: 24px; letter-spacing: 2px; margin-bottom: 14px; }
-.review-panel h3 { font-size: clamp(28px, 3vw, 42px); line-height: 1.05; text-transform: uppercase; margin-bottom: 14px; }
-.review-panel p { color: var(--muted); font-size: 19px; max-width: 650px; margin: 0 auto 26px; }
-
-.faq{
-  background:#101010;
-}
-
-.faq-list{
-  display:grid;
-  gap:12px;
-  max-width:1100px;
-  margin:0 auto;
-}
-
-.faq-item{
-  background:#151515;
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:16px;
-  overflow:hidden;
-}
-
-.faq-item summary{
-  cursor:pointer;
-  padding:22px;
-  font-weight:800;
-  list-style:none;
-  font-size:18px;
-}
-
-.faq-item summary::-webkit-details-marker{
-  display:none;
-}
-
-.faq-item summary::after{
-  content:"+";
-  float:right;
-  color:var(--accent);
-  font-size:24px;
-}
-
-.faq-item[open] summary::after{
-  content:"−";
-}
-
-.faq-item p{
-  padding:0 22px 22px;
-  color:#c7c7c7;
-  line-height:1.7;
-}
-  
-.contact { background: linear-gradient(180deg, #131313, #080808); }
-.contact-panel { max-width: 760px; margin: 0 auto; display: grid; gap: 14px; background: linear-gradient(180deg, #191919, #121212); border: 1px solid var(--line); border-radius: 20px; padding: 28px; box-shadow: var(--shadow); }
-.contact-panel .btn { width: 100%; font-size: 17px; }
-
-footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 0; font-size: 14px; }
-.floating-whatsapp { position: fixed; right: 18px; bottom: 18px; width: 58px; height: 58px; border-radius: 50%; z-index: 999; display: grid; place-items: center; background: var(--whatsapp); color: #ffffff; font-size: 29px; border: 2px solid rgba(255,255,255,0.25); box-shadow: 0 12px 30px rgba(0,0,0,0.38); }
-
-
-
-/* Services dropdown navigation */
-.nav-dropdown{
-  position:relative;
-  display:flex;
-  align-items:center;
-}
-
-.nav-dropbtn{
-  background:none;
-  border:0;
-  color:#dddddd;
-  font-size:14px;
-  letter-spacing:0.8px;
-  font-weight:900;
-  text-transform:uppercase;
-  cursor:pointer;
-  font-family:inherit;
-  padding:0;
-}
-
-.nav-dropbtn:hover{
-  color:#ffffff;
-}
-
-.nav-dropdown-menu{
-  display:none;
-  position:absolute;
-  top:26px;
-  left:0;
-  width:260px;
-  background:#121212;
-  border:1px solid var(--line);
-  border-radius:14px;
-  box-shadow:var(--shadow);
-  padding:10px;
-  z-index:2000;
-}
-
-.nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown:focus-within .nav-dropdown-menu{
-  display:grid;
-  gap:4px;
-}
-
-.nav-dropdown-menu a{
-  display:block;
-  padding:11px 12px;
-  border-radius:9px;
-  color:#e8e8e8;
-  font-size:13px;
-  letter-spacing:0.4px;
-  text-transform:none;
-}
-
-.nav-dropdown-menu a:hover{
-  background:rgba(215,38,46,0.16);
-  color:#ffffff;
-}
-
-.mobile-services-dropdown{
-  border-bottom:1px solid rgba(255,255,255,0.08);
-  margin-bottom:6px;
-}
-
-.mobile-services-dropdown summary{
-  list-style:none;
-  padding:12px 0;
-  font-weight:900;
-  color:#e2e2e2;
-  text-transform:uppercase;
-  letter-spacing:0.8px;
-  cursor:pointer;
-}
-
-.mobile-services-dropdown summary::-webkit-details-marker{
-  display:none;
-}
-
-.mobile-services-dropdown summary::after{
-  content:"+";
-  float:right;
-  color:var(--accent);
-}
-
-.mobile-services-dropdown[open] summary::after{
-  content:"−";
-}
-
-.mobile-services-menu{
-  display:grid;
-  gap:4px;
-  padding:0 0 10px 12px;
-}
-
-.mobile-services-menu a{
-  padding:9px 0;
-  font-size:13px;
-  text-transform:none;
-  letter-spacing:0.3px;
-}
-
-/* Dedicated service pages */
-.service-hero{
-  background:
     linear-gradient(90deg, rgba(0,0,0,0.94) 0%, rgba(0,0,0,0.78) 58%, rgba(0,0,0,0.62) 100%),
     radial-gradient(circle at 82% 45%, rgba(215,38,46,0.24), transparent 0 22%, transparent 42%),
     linear-gradient(135deg, #111 0%, #181818 42%, #2a0406 100%);
-  padding:78px 0 70px;
+  padding: 78px 0 70px;
 }
 
-.service-hero h1{
-  max-width:980px;
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 1000;
 }
 
-.service-hero p{
-  max-width:780px;
-  color:#efefef;
-  font-size:clamp(18px,2vw,22px);
-  margin-bottom:28px;
+.eyebrow::before {
+  content: "";
+  width: 36px;
+  height: 2px;
+  background: var(--accent);
 }
 
-.breadcrumbs{
-  color:#c7c7c7;
-  font-size:14px;
-  margin-bottom:22px;
+h1 {
+  font-size: clamp(45px, 6.4vw, 86px);
+  line-height: 0.94;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  font-weight: 1000;
+  margin-bottom: 22px;
 }
 
-.breadcrumbs a{
-  color:#ffffff;
-  font-weight:800;
+.service-hero h1 {
+  max-width: 980px;
 }
 
-.service-content{
-  background:#101010;
+.service-hero p {
+  max-width: 780px;
+  color: #efefef;
+  font-size: clamp(18px,2vw,22px);
+  margin-bottom: 28px;
 }
 
-.service-layout{
-  display:grid;
-  grid-template-columns:1.4fr 0.8fr;
-  gap:24px;
-  align-items:start;
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.breadcrumbs {
+  color: #c7c7c7;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.breadcrumbs a {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+/* Sections */
+section {
+  padding: 78px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.service-content {
+  background: #101010;
+}
+
+.service-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 24px;
+  align-items: start;
 }
 
 .service-main,
-.service-side-card{
-  background:#151515;
-  border:1px solid var(--line);
-  border-radius:18px;
-  box-shadow:0 10px 26px rgba(0,0,0,0.18);
+.service-side-card {
+  background: #151515;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.18);
 }
 
-.service-main{
-  padding:34px;
+.service-main {
+  padding: 34px;
 }
 
 .service-main h2,
-.service-side-card h2{
-  font-size:clamp(28px,3vw,42px);
-  line-height:1.05;
-  text-transform:uppercase;
-  margin-bottom:18px;
+.service-side-card h2 {
+  font-size: clamp(28px,3vw,42px);
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin-bottom: 18px;
 }
 
-.service-main h3{
-  font-size:22px;
-  text-transform:uppercase;
-  margin:28px 0 12px;
+.service-main h3 {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin: 28px 0 12px;
 }
 
-.service-main p{
-  color:#dcdcdc;
-  margin-bottom:16px;
-  font-size:17px;
+.service-main p {
+  color: #dcdcdc;
+  margin-bottom: 16px;
+  font-size: 17px;
 }
 
-.service-list{
-  list-style:none;
-  display:grid;
-  gap:10px;
-  margin:16px 0 24px;
+.service-list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 24px;
 }
 
-.service-list li{
-  color:#eeeeee;
-  display:flex;
-  gap:10px;
+.service-list li {
+  color: #eeeeee;
+  display: flex;
+  gap: 10px;
 }
 
-.service-list li::before{
-  content:"✓";
-  color:var(--accent);
-  font-weight:1000;
+.service-list li::before {
+  content: "✓";
+  color: var(--accent);
+  font-weight: 1000;
 }
 
-.service-side-card{
-  padding:26px;
-  position:sticky;
-  top:100px;
+.service-side-card {
+  padding: 26px;
+  position: sticky;
+  top: 100px;
 }
 
-.service-side-card p{
-  color:#cfcfcf;
-  margin-bottom:18px;
+.service-side-card p {
+  color: #cfcfcf;
+  margin-bottom: 18px;
 }
 
-.related-links{
-  display:grid;
-  gap:10px;
-  margin-top:14px;
+.related-links {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
 }
 
-.related-links a{
-  display:block;
-  background:#111;
-  border:1px solid rgba(255,255,255,0.1);
-  border-radius:10px;
-  padding:12px;
-  color:#eeeeee;
-  font-weight:800;
+.related-links a {
+  display: block;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 12px;
+  color: #eeeeee;
+  font-weight: 800;
 }
 
-.related-links a:hover{
-  border-color:var(--accent);
-  background:rgba(215,38,46,0.10);
+.related-links a:hover {
+  border-color: var(--accent);
+  background: rgba(215,38,46,0.10);
 }
 
-.service-cta-panel{
-  margin-top:24px;
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
+.service-cta-panel {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 12px;
 }
 
-@media (max-width:980px){
-  .service-layout{
-    grid-template-columns:1fr;
-  }
-  .service-side-card{
-    position:static;
-  }
-  .service-cta-panel{
-    grid-template-columns:1fr;
-  }
+.faq-item {
+  background: #151515;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 12px;
 }
 
-@media (max-width: 1180px) { .jobs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.faq-item summary {
+  cursor: pointer;
+  padding: 22px;
+  font-weight: 800;
+  list-style: none;
+  font-size: 18px;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  float: right;
+  color: var(--accent);
+  font-size: 24px;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item p {
+  padding: 0 22px 22px;
+  color: #c7c7c7;
+  line-height: 1.7;
+}
+
+footer {
+  background: #050505;
+  color: #8e8e8e;
+  text-align: center;
+  padding: 24px 0;
+  font-size: 14px;
+}
+
+.floating-whatsapp {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  background: var(--whatsapp);
+  color: #ffffff;
+  font-size: 29px;
+  border: 2px solid rgba(255,255,255,0.25);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.38);
+}
+
 @media (max-width: 980px) {
-  .desktop-nav { display: none; }
-  .menu-button { display: block; }
-  .about-wrap { grid-template-columns: 1fr; }
-  .about-photo { height: 320px; }
-  .photo-strip-grid { grid-template-columns: 1fr; }
-  .photo-card, .photo-card img { min-height: 300px; }
-  .service-grid { grid-template-columns: 1fr; }
-  .hero-content { padding: 48px 0 34px; max-width: 100%; }
-  .hero-actions { display: grid; grid-template-columns: 1fr; gap: 12px; }
-  .hero-actions .btn { width: 100%; }
-  .trust-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .trust-row span { font-size: 13px; padding: 9px 10px; white-space: normal; }
+  .service-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .service-side-card {
+    position: static;
+  }
+
+  .service-cta-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
 }
+
 @media (max-width: 620px) {
   .site-logo {
-  height: 42px;
-  padding: 3px 7px;
-  border-radius: 8px;
+    height: 42px;
+    width: auto;
+    max-width: 220px;
+    padding: 3px 7px;
+    border-radius: 8px;
+  }
+
+  .container {
+    width: min(100% - 24px, var(--max));
+  }
+
+  .nav-wrap {
+    min-height: 66px;
+  }
+
+  .header-call {
+    display: none;
+  }
+
+  .menu-panel {
+    width: 280px;
+  }
+
+  h1 {
+    font-size: 38px;
+    line-height: 0.98;
+    letter-spacing: -1px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.6px;
+    margin-bottom: 14px;
+  }
+
+  .eyebrow::before {
+    width: 28px;
+  }
+
+  section {
+    padding: 54px 0;
+  }
+
+  .service-main {
+    padding: 24px 18px;
+  }
+
+  .floating-whatsapp {
+    width: 54px;
+    height: 54px;
+    right: 14px;
+    bottom: 14px;
+  }
 }
-  .container { width: min(100% - 24px, var(--max)); }
-  .nav-wrap { min-height: 66px; }
-  .brand-icon { width: 38px; height: 38px; font-size: 19px; }
-  .brand-title { font-size: 20px; }
-  .brand-subtitle { font-size: 8px; letter-spacing: 2px; }
-  h1 { font-size: 38px; line-height: 0.98; letter-spacing: -1px; }
-  .eyebrow { font-size: 11px; letter-spacing: 1.6px; margin-bottom: 14px; }
-  .eyebrow::before { width: 28px; }
-  .hero p { font-size: 16px; margin-bottom: 22px; }
-  section { padding: 54px 0; }
-  .section-title { margin-bottom: 30px; }
-  .section-title h2 { font-size: 32px; }
-  .section-title p { font-size: 16px; }
-  .card { padding: 22px; }
-  .about-photo { height: 240px; border-radius: 15px; }
-  .about-copy h2 { font-size: 32px; }
-  .about-copy p { font-size: 16px; }
-  .area-grid { grid-template-columns: 1fr; }
-  .area-pill { text-align: center; }
-  .jobs-grid { grid-template-columns: 1fr; }
-  .job-card img { height: 240px; }
-  .photo-card, .photo-card img { min-height: 250px; }
-  .photo-card-caption h3 { font-size: 22px; }
-  .review-panel, .contact-panel { padding: 24px 18px; }
-  .floating-whatsapp { width: 54px; height: 54px; right: 14px; bottom: 14px; }
-}
+
 @media (max-width: 390px) {
   .site-logo {
-  height: 38px;
-}
-  .brand-title { font-size: 18px; }
-  .brand-subtitle { display: none; }
-  h1 { font-size: 34px; }
-  .trust-row { grid-template-columns: 1fr; }
-}
+    height: 38px;
+    max-width: 200px;
+  }
 
-.header-actions { display: flex; align-items: center; gap: 14px; margin-left: auto; }
-.menu-dropdown { position: relative; }
-.menu-toggle { display: inline-flex; align-items: center; gap: 9px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.28); color: #fff; font-weight: 900; text-transform: uppercase; letter-spacing: 0.8px; font-size: 14px; padding: 12px 20px; border-radius: 10px; cursor: pointer; font-family: inherit; min-height: 46px; }
-.menu-toggle:hover { border-color: var(--accent); background: rgba(215,38,46,0.14); }
-.menu-toggle-bars { font-size: 18px; line-height: 1; }
-.menu-panel { display: none; position: absolute; right: 0; top: calc(100% + 12px); width: 280px; background: #121212; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 10px; z-index: 2000; }
-.menu-panel.open { display: grid; gap: 4px; }
-.menu-panel a { display: block; padding: 13px 14px; border-radius: 9px; color: #e8e8e8; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px; }
-.menu-panel a:hover { background: rgba(215,38,46,0.16); color: #fff; }  
-.menu-submenu {
-    border-top: 1px solid var(--line);
-    margin-top: 4px;
-    padding-top: 4px;
+  h1 {
+    font-size: 34px;
+  }
 }
-  
-.menu-submenu summary {
-    display: block;
-    padding: 13px 14px;
-    border-radius: 9px;
-    color: #e8e8e8;
-    font-size: 14px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    cursor: pointer;
-    list-style: none;
-}
-
-.menu-submenu summary::-webkit-details-marker {
-    display: none;
-}
-
-.menu-submenu summary:hover {
-    background: rgba(215,38,46,0.16);
-    color: #fff;
-}
-
-.menu-submenu a {
-    display: block;
-    padding: 10px 14px 10px 28px;
-    border-radius: 9px;
-    color: #d0d0d0;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: none;
-    letter-spacing: 0;
-}
-
-.menu-submenu a:hover {
-    background: rgba(215,38,46,0.16);
-    color: #fff;
-}
-.menu-heading { display: block; padding: 8px 14px 4px; color: var(--accent); font-size: 11px; font-weight: 1000; letter-spacing: 1.6px; text-transform: uppercase; }
-.menu-divider { display: block; height: 1px; background: var(--line); margin: 6px 8px; }
-@media (max-width: 620px) { .header-call { display: none; } .menu-panel { width: 280px; } }
 </style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -746,6 +672,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
   ]
 }
 </script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -781,20 +708,19 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 </head>
 
 <body>
+
 <header class="site-header">
   <div class="container nav-wrap">
 
     <a class="brand brand-logo-link" href="index.html#top" aria-label="Mackie's Mobile Mechanics home">
-      <img src="Mackies-Mobile-Mechanics-Logo.png"
-           alt="Mackie's Mobile Mechanics mobile mechanic logo"
-           class="site-logo"
-           width="320"
-           height="90"
-           fetchpriority="high"
-           decoding="async">
+      Mackies-Mobile-Mechanics-Logo.png
     </a>
 
-    <divan class="menu-toggle-bars">&#9776;</span>
+    <div class="header-actions">
+
+      <div class="menu-dropdown">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Open site menu">
+          <span class="menu-toggle-bars">&#9776;</span>
           <span>Menu</span>
         </button>
 
@@ -806,11 +732,11 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
             <summary>🔧 Services ▼</summary>
 
             <div class="submenu-links">
-              <a href="engine-diagnostics.html">Engine Diagnostics</a>
-              <a href="brake-repairs.html">Brake Repairs</a>
-              <a href="vehicle-servicing.html">Vehicle Servicing</a>
-              <a href="clutch-replacement.html">Clutch Replacement</a>
-              <a href="battery-replacement.html">Battery Replacement</a>
+              <a href="engine-diagnostics.html" role="menuitem">Engine Diagnostics</a>
+              <a href="brake-repairs.html" role="menuitem">Brake Repairs</a>
+              <a href="vehicle-servicing.html" role="menuitem">Vehicle Servicing</a>
+              <a href="clutch-replacement.html" role="menuitem">Clutch Replacement</a>
+              <a href="battery-replacement.html" role="menuitem">Battery Replacement</a>
             </div>
           </details>
 
@@ -818,8 +744,8 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
             <summary>📍 Areas We Cover ▼</summary>
 
             <div class="submenu-links">
-              <a href="mobile-mechanic-warrington.html">Warrington</a>
-              <a href="mobile-mechanic-st-helens.html">St Helens</a>
+              <a href="mobile-mechanic-warrington.html" role="menuitem">Warrington</a>
+              <a href="mobile-mechanic-st-helens.html" role="menuitem">St Helens</a>
             </div>
           </details>
 
@@ -844,27 +770,44 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
       <div class="eyebrow">Warning Lights • Fault Codes • Mobile Diagnostics</div>
       <h1>Engine Diagnostics</h1>
       <p>Engine diagnostics and fault finding for warning lights, poor running, loss of power and unexplained vehicle faults across Newton-le-Willows, Warrington and surrounding areas.</p>
+
       <div class="hero-actions">
-        <a class="btn btn-primary" href="tel:07722092401">☎ Call now: 07722 092401</a>
-        <a class="btn btn-whatsapp" href="https://wa.me/447722092401" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp us</a>
+        tel:07722092401☎ Call now: 07722 092401</a>
+
+        <a class="btn btn-whatsapp" href="https://wa.me/447722092401" target="_blank" rel="noopener">
+          <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          WhatsApp us
+        </a>
       </div>
     </div>
   </section>
 
   <section class="service-content">
     <div class="container service-layout">
+
       <article class="service-main">
         <h2>What is Engine Diagnostics?</h2>
         <p>Engine diagnostics involves connecting professional diagnostic equipment to your vehicle to read fault codes and live data from the electronic systems. The codes are only the starting point: a proper diagnosis also involves checking symptoms, testing likely components and identifying the real cause before parts are replaced.</p>
 
         <h3>Common symptoms</h3>
         <ul class="service-list">
-          <li>Engine management light on the dashboard</li><li>Poor performance or reduced power</li><li>Rough running, misfiring or stalling</li><li>Increased fuel consumption</li><li>Starting issues</li><li>Warning messages or limp mode</li>
+          <li>Engine management light on the dashboard</li>
+          <li>Poor performance or reduced power</li>
+          <li>Rough running, misfiring or stalling</li>
+          <li>Increased fuel consumption</li>
+          <li>Starting issues</li>
+          <li>Warning messages or limp mode</li>
         </ul>
 
         <h3>Common causes</h3>
         <ul class="service-list">
-          <li>Faulty sensors or wiring issues</li><li>EGR, DPF or turbo-related faults</li><li>Ignition, injector or fuel system issues</li><li>Battery voltage or charging problems</li><li>Air intake or boost pressure problems</li>
+          <li>Faulty sensors or wiring issues</li>
+          <li>EGR, DPF or turbo-related faults</li>
+          <li>Ignition, injector or fuel system issues</li>
+          <li>Battery voltage or charging problems</li>
+          <li>Air intake or boost pressure problems</li>
         </ul>
 
         <h3>What can happen if it is ignored?</h3>
@@ -874,11 +817,31 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
         <p>Mackie's Mobile Mechanics covers Newton-le-Willows, Earlestown, Haydock, Golborne, Warrington, St Helens, Lowton, Leigh, Ashton-in-Makerfield, Winwick, Burtonwood, Croft and nearby areas.</p>
 
         <h3>Frequently asked questions</h3>
-        <details class="faq-item"><summary>Can you diagnose an engine management light?</summary><p>Yes. Engine diagnostics can be carried out for engine management lights, warning messages and running faults.</p></details><details class="faq-item"><summary>Do fault codes always tell you the exact problem?</summary><p>No. Fault codes point towards a system or circuit, but further checks are often needed to confirm the real cause.</p></details><details class="faq-item"><summary>Can diagnostics be done at my home or workplace?</summary><p>Yes. Many diagnostic checks can be carried out at a home, workplace or suitable roadside location.</p></details>
+
+        <details class="faq-item">
+          <summary>Can you diagnose an engine management light?</summary>
+          <p>Yes. Engine diagnostics can be carried out for engine management lights, warning messages and running faults.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do fault codes always tell you the exact problem?</summary>
+          <p>No. Fault codes point towards a system or circuit, but further checks are often needed to confirm the real cause.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can diagnostics be done at my home or workplace?</summary>
+          <p>Yes. Many diagnostic checks can be carried out at a home, workplace or suitable roadside location.</p>
+        </details>
 
         <div class="service-cta-panel">
-          <a class="btn btn-primary" href="tel:07722092401">☎ Call 07722 092401</a>
-          <a class="btn btn-whatsapp" href="https://wa.me/447722092401" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Message on WhatsApp</a>
+          tel:07722092401☎ Call 07722 092401</a>
+
+          <a class="btn btn-whatsapp" href="https://wa.me/447722092401" target="_blank" rel="noopener">
+            <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            Message on WhatsApp
+          </a>
         </div>
       </article>
 
@@ -886,15 +849,16 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
         <span class="label">Related Services</span>
         <h2>Other Services</h2>
         <p>Explore more mobile mechanic services available across Newton-le-Willows and the surrounding areas.</p>
+
         <div class="related-links">
           <a href="engine-diagnostics.html">Engine Diagnostics</a>
-<a href="clutch-replacement.html">Clutch Replacement</a>
-<a href="brake-repairs.html">Brake Repairs</a>
-<a href="vehicle-servicing.html">Vehicle Servicing</a>
-<a href="battery-replacement.html">Battery Replacement</a>
-
+          <a href="clutch-replacement.html">Clutch Replacement</a>
+          <a href="brake-repairs.html">Brake Repairs</a>
+          <a href="vehicle-servicing.html">Vehicle Servicing</a>
+          <a href="battery-replacement.html">Battery Replacement</a>
         </div>
       </aside>
+
     </div>
   </section>
 </main>
@@ -902,7 +866,13 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 <footer>
   <div class="container">© 2026 Mackie's Mobile Mechanics. Mobile mechanic in Newton-le-Willows and surrounding areas.</div>
 </footer>
-<a class="floating-whatsapp" href="https://wa.me/447722092401" target="_blank" rel="noopener" aria-label="Message Mackie's Mobile Mechanics on WhatsApp"><svg class="floating-whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+
+<a class="floating-whatsapp" href="https://wa.me/447722092401" target="_blank" rel="noopener" aria-label="Message Mackie's Mobile Mechanics on WhatsApp">
+  <svg class="floating-whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+</a>
+
 <script>
 const menuToggle = document.getElementById('menuToggle');
 const menuPanel = document.getElementById('menuPanel');
@@ -929,5 +899,6 @@ document.addEventListener('keydown', function (e) {
   }
 });
 </script>
+
 </body>
 </html>
