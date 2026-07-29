@@ -1,10 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mobilemechanics.net/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://mobilemechanics.net/engine-diagnostics.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mobilemechanics.net/clutch-replacement.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mobilemechanics.net/brake-repairs.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mobilemechanics.net/vehicle-servicing.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mobilemechanics.net/battery-replacement.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mobilemechanics.net/mobile-mechanic-warrington.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url>
+    <loc>https://mobilemechanics.net/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://mobilemechanics.net/engine-diagnostics.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mobilemechanics.net/clutch-replacement.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mobilemechanics.net/brake-repairs.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mobilemechanics.net/vehicle-servicing.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mobilemechanics.net/battery-replacement.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mobilemechanics.net/mobile-mechanic-warrington.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mobilemechanics.net/mobile-mechanic-st-helens.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
