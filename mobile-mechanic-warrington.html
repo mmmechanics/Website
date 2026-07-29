@@ -802,17 +802,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 
     <a class="brand brand-logo-link" href="index.html#top" aria-label="Mackie's Mobile Mechanics home">
       <img src="Mackies-Mobile-Mechanics-Logo.png"
-           alt="Mackie's Mobile Mechanics mobile mechanic logo"
-           class="site-logo"
-           width="320"
-           height="90"
-           fetchpriority="high"
-           decoding="async">
-    </a>
-
-    <div class="header-actions">
-
-      <div class="menu-dropdown">
+           alt="Mackie's Mobile Mechanics mobile ="menu-dropdown">
         <button class="menu-toggle" id="menuToggle" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Open site menu">
           <span class="menu-toggle-bars">&#9776;</span>
           <span>Menu</span>
@@ -823,17 +813,24 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
           <a href="index.html#about" role="menuitem">👨‍🔧 About</a>
 
           <details class="menu-submenu">
-            <summary>🔧 Services</summary>
-            <a href="engine-diagnostics.html" role="menuitem">Engine Diagnostics</a>
-            <a href="brake-repairs.html" role="menuitem">Brake Repairs</a>
-            <a href="vehicle-servicing.html" role="menuitem">Vehicle Servicing</a>
-            <a href="clutch-replacement.html" role="menuitem">Clutch Replacement</a>
-            <a href="battery-replacement.html" role="menuitem">Battery Replacement</a>
+            <summary>🔧 Services ▼</summary>
+
+            <div class="submenu-links">
+              <a href="engine-diagnostics.html">Engine Diagnostics</a>
+              <a href="brake-repairs.html">Brake Repairs</a>
+              <a href="vehicle-servicing.html">Vehicle Servicing</a>
+              <a href="clutch-replacement.html">Clutch Replacement</a>
+              <a href="battery-replacement.html">Battery Replacement</a>
+            </div>
           </details>
 
           <details class="menu-submenu">
-            <summary>📍 Areas We Cover</summary>
-            <a href="mobile-mechanic-warrington.html" role="menuitem">Warrington</a>
+            <summary>📍 Areas We Cover ▼</summary>
+
+            <div class="submenu-links">
+              <a href="mobile-mechanic-warrington.html">Warrington</a>
+              <a href="mobile-mechanic-st-helens.html">St Helens</a>
+            </div>
           </details>
 
           <a href="index.html#recent-jobs" role="menuitem">📸 Recent Jobs</a>
@@ -843,12 +840,13 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
         </div>
       </div>
 
-      <a class="btn btn-primary btn-small header-call" href="tel:07722092401">&#9742; 07722 092401</a>
+      tel:07722092401&#9742; 07722 092401</a>
 
     </div>
 
   </div>
 </header>
+
 <main id="top">
   <section class="service-hero">
     <div class="container">
@@ -947,15 +945,22 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 <script>
 const menuToggle = document.getElementById('menuToggle');
 const menuPanel = document.getElementById('menuPanel');
+
 menuToggle.addEventListener('click', function (e) {
   e.stopPropagation();
   const open = menuPanel.classList.toggle('open');
   menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
+
+menuPanel.addEventListener('click', function (e) {
+  e.stopPropagation();
+});
+
 document.addEventListener('click', function () {
   menuPanel.classList.remove('open');
   menuToggle.setAttribute('aria-expanded', 'false');
 });
+
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     menuPanel.classList.remove('open');
