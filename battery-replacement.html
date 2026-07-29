@@ -615,7 +615,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 
 @media (max-width: 1180px) { .jobs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 980px) {
-  .desktop-nav, .header-call { display: none; }
+  .desktop-nav { display: none; }
   .menu-button { display: block; }
   .about-wrap { grid-template-columns: 1fr; }
   .about-photo { height: 320px; }
@@ -675,13 +675,56 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 .menu-toggle { display: inline-flex; align-items: center; gap: 9px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.28); color: #fff; font-weight: 900; text-transform: uppercase; letter-spacing: 0.8px; font-size: 14px; padding: 12px 20px; border-radius: 10px; cursor: pointer; font-family: inherit; min-height: 46px; }
 .menu-toggle:hover { border-color: var(--accent); background: rgba(215,38,46,0.14); }
 .menu-toggle-bars { font-size: 18px; line-height: 1; }
-.menu-panel { display: none; position: absolute; right: 0; top: calc(100% + 12px); width: 290px; background: #121212; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 10px; z-index: 2000; }
+.menu-panel { display: none; position: absolute; right: 0; top: calc(100% + 12px); width: 280px; background: #121212; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 10px; z-index: 2000; }
 .menu-panel.open { display: grid; gap: 4px; }
 .menu-panel a { display: block; padding: 13px 14px; border-radius: 9px; color: #e8e8e8; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px; }
-.menu-panel a:hover { background: rgba(215,38,46,0.16); color: #fff; }
+.menu-panel a:hover { background: rgba(215,38,46,0.16); color: #fff; }  
+.menu-submenu {
+    border-top: 1px solid var(--line);
+    margin-top: 4px;
+    padding-top: 4px;
+}
+  
+.menu-submenu summary {
+    display: block;
+    padding: 13px 14px;
+    border-radius: 9px;
+    color: #e8e8e8;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.menu-submenu summary::-webkit-details-marker {
+    display: none;
+}
+
+.menu-submenu summary:hover {
+    background: rgba(215,38,46,0.16);
+    color: #fff;
+}
+
+.menu-submenu a {
+    display: block;
+    padding: 10px 14px 10px 28px;
+    border-radius: 9px;
+    color: #d0d0d0;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.menu-submenu a:hover {
+    background: rgba(215,38,46,0.16);
+    color: #fff;
+}
 .menu-heading { display: block; padding: 8px 14px 4px; color: var(--accent); font-size: 11px; font-weight: 1000; letter-spacing: 1.6px; text-transform: uppercase; }
 .menu-divider { display: block; height: 1px; background: var(--line); margin: 6px 8px; }
-@media (max-width: 620px) { .header-call { display: none; } .menu-panel { width: 240px; } }
+@media (max-width: 620px) { .header-call { display: none; } .menu-panel { width: 280px; } }
 </style>
 <script type="application/ld+json">
 {
@@ -740,35 +783,54 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 <body>
 <header class="site-header">
   <div class="container nav-wrap">
+
     <a class="brand brand-logo-link" href="index.html#top" aria-label="Mackie's Mobile Mechanics home">
-      <img src="Mackies-Mobile-Mechanics-Logo.png" alt="Mackie's Mobile Mechanics mobile mechanic logo" class="site-logo" width="320" height="90" fetchpriority="high" decoding="async">
+      <img src="Mackies-Mobile-Mechanics-Logo.png"
+           alt="Mackie's Mobile Mechanics mobile mechanic logo"
+           class="site-logo"
+           width="320"
+           height="90"
+           fetchpriority="high"
+           decoding="async">
     </a>
+
     <div class="header-actions">
+
       <div class="menu-dropdown">
-        <button class="menu-toggle" id="menuToggle" type="button" aria-haspopup="true" aria-expanded="false">
-          <span class="menu-toggle-bars">&#9776;</span> Menu
+        <button class="menu-toggle" id="menuToggle" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Open site menu">
+          <span class="menu-toggle-bars">&#9776;</span>
+          <span>Menu</span>
         </button>
+
         <div class="menu-panel" id="menuPanel" role="menu" aria-label="Site menu">
-          <span class="menu-heading">Pages</span>
-          <a href="index.html" role="menuitem">Home</a>
-          <a href="engine-diagnostics.html" role="menuitem">Engine Diagnostics</a>
-          <a href="clutch-replacement.html" role="menuitem">Clutch Replacement</a>
-          <a href="brake-repairs.html" role="menuitem">Brake Repairs</a>
-          <a href="vehicle-servicing.html" role="menuitem">Vehicle Servicing</a>
-          <a href="battery-replacement.html" role="menuitem">Battery Replacement</a>
-          <a href="mobile-mechanic-warrington.html" role="menuitem">Mobile Mechanic Warrington</a>
-          <span class="menu-divider" role="separator"></span>
-          <span class="menu-heading">More</span>
-          <a href="index.html#about" role="menuitem">About</a>
-          <a href="index.html#areas" role="menuitem">Areas Covered</a>
-          <a href="index.html#recent-jobs" role="menuitem">Recent Jobs</a>
-          <a href="index.html#reviews" role="menuitem">Reviews</a>
-          <a href="index.html#faq" role="menuitem">FAQs</a>
-          <a href="index.html#contact" role="menuitem">Contact</a>
+          <a href="index.html" role="menuitem">🏠 Home</a>
+          <a href="index.html#about" role="menuitem">👨‍🔧 About</a>
+
+          <details class="menu-submenu">
+            <summary>🔧 Services</summary>
+            <a href="engine-diagnostics.html" role="menuitem">Engine Diagnostics</a>
+            <a href="brake-repairs.html" role="menuitem">Brake Repairs</a>
+            <a href="vehicle-servicing.html" role="menuitem">Vehicle Servicing</a>
+            <a href="clutch-replacement.html" role="menuitem">Clutch Replacement</a>
+            <a href="battery-replacement.html" role="menuitem">Battery Replacement</a>
+          </details>
+
+          <details class="menu-submenu">
+            <summary>📍 Areas We Cover</summary>
+            <a href="mobile-mechanic-warrington.html" role="menuitem">Warrington</a>
+          </details>
+
+          <a href="index.html#recent-jobs" role="menuitem">📸 Recent Jobs</a>
+          <a href="index.html#reviews" role="menuitem">⭐ Reviews</a>
+          <a href="index.html#faq" role="menuitem">❓ FAQs</a>
+          <a href="index.html#contact" role="menuitem">📞 Contact</a>
         </div>
       </div>
+
       <a class="btn btn-primary btn-small header-call" href="tel:07722092401">&#9742; 07722 092401</a>
+
     </div>
+
   </div>
 </header>
 
@@ -790,7 +852,6 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
     <div class="container service-layout">
       <article class="service-main">
         <h2>What is Battery Replacement?</h2>
-        <p><strong>Flat battery on the drive? We test the battery and charging system first, so you only replace the battery if it is genuinely the cause.</strong></p>
         <p>Battery replacement involves testing the existing battery and charging system before fitting a suitable replacement battery where needed. A weak battery can cause starting problems, dashboard warnings and electrical issues, especially in colder weather.</p>
 
         <h3>Common symptoms</h3>

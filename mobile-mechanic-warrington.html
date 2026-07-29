@@ -29,12 +29,6 @@
   "telephone": "07722 092401",
   "url": "https://mobilemechanics.net/mobile-mechanic-warrington.html",
   "priceRange": "££",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Warrington",
-    "addressRegion": "Cheshire",
-    "addressCountry": "GB"
-  },
   "areaServed": [
     "Newton-le-Willows",
     "Haydock",
@@ -49,13 +43,7 @@
     "Burtonwood",
     "Croft"
   ],
-  "serviceType": "Mobile Mechanic",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "54",
-    "bestRating": "5"
-  }
+  "serviceType": "Mobile Mechanic"
 }
 </script>
 <script type="application/ld+json">
@@ -696,7 +684,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 
 @media (max-width: 1180px) { .jobs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 980px) {
-  .desktop-nav, .header-call { display: none; }
+  .desktop-nav { display: none; }
   .menu-button { display: block; }
   .about-wrap { grid-template-columns: 1fr; }
   .about-photo { height: 320px; }
@@ -756,47 +744,109 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
 .menu-toggle { display: inline-flex; align-items: center; gap: 9px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.28); color: #fff; font-weight: 900; text-transform: uppercase; letter-spacing: 0.8px; font-size: 14px; padding: 12px 20px; border-radius: 10px; cursor: pointer; font-family: inherit; min-height: 46px; }
 .menu-toggle:hover { border-color: var(--accent); background: rgba(215,38,46,0.14); }
 .menu-toggle-bars { font-size: 18px; line-height: 1; }
-.menu-panel { display: none; position: absolute; right: 0; top: calc(100% + 12px); width: 290px; background: #121212; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 10px; z-index: 2000; }
+.menu-panel { display: none; position: absolute; right: 0; top: calc(100% + 12px); width: 280px; background: #121212; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 10px; z-index: 2000; }
 .menu-panel.open { display: grid; gap: 4px; }
 .menu-panel a { display: block; padding: 13px 14px; border-radius: 9px; color: #e8e8e8; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px; }
-.menu-panel a:hover { background: rgba(215,38,46,0.16); color: #fff; }
+.menu-panel a:hover { background: rgba(215,38,46,0.16); color: #fff; }  
+.menu-submenu {
+    border-top: 1px solid var(--line);
+    margin-top: 4px;
+    padding-top: 4px;
+}
+  
+.menu-submenu summary {
+    display: block;
+    padding: 13px 14px;
+    border-radius: 9px;
+    color: #e8e8e8;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.menu-submenu summary::-webkit-details-marker {
+    display: none;
+}
+
+.menu-submenu summary:hover {
+    background: rgba(215,38,46,0.16);
+    color: #fff;
+}
+
+.menu-submenu a {
+    display: block;
+    padding: 10px 14px 10px 28px;
+    border-radius: 9px;
+    color: #d0d0d0;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.menu-submenu a:hover {
+    background: rgba(215,38,46,0.16);
+    color: #fff;
+}
 .menu-heading { display: block; padding: 8px 14px 4px; color: var(--accent); font-size: 11px; font-weight: 1000; letter-spacing: 1.6px; text-transform: uppercase; }
 .menu-divider { display: block; height: 1px; background: var(--line); margin: 6px 8px; }
-@media (max-width: 620px) { .header-call { display: none; } .menu-panel { width: 240px; } }
+@media (max-width: 620px) { .header-call { display: none; } .menu-panel { width: 280px; } }
 </style>
 </head>
 <body>
 <header class="site-header">
   <div class="container nav-wrap">
+
     <a class="brand brand-logo-link" href="index.html#top" aria-label="Mackie's Mobile Mechanics home">
-      <img src="Mackies-Mobile-Mechanics-Logo.png" alt="Mackie's Mobile Mechanics mobile mechanic logo" class="site-logo" width="320" height="90" fetchpriority="high" decoding="async">
+      <img src="Mackies-Mobile-Mechanics-Logo.png"
+           alt="Mackie's Mobile Mechanics mobile mechanic logo"
+           class="site-logo"
+           width="320"
+           height="90"
+           fetchpriority="high"
+           decoding="async">
     </a>
+
     <div class="header-actions">
+
       <div class="menu-dropdown">
-        <button class="menu-toggle" id="menuToggle" type="button" aria-haspopup="true" aria-expanded="false">
-          <span class="menu-toggle-bars">&#9776;</span> Menu
+        <button class="menu-toggle" id="menuToggle" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Open site menu">
+          <span class="menu-toggle-bars">&#9776;</span>
+          <span>Menu</span>
         </button>
+
         <div class="menu-panel" id="menuPanel" role="menu" aria-label="Site menu">
-          <span class="menu-heading">Pages</span>
-          <a href="index.html" role="menuitem">Home</a>
-          <a href="engine-diagnostics.html" role="menuitem">Engine Diagnostics</a>
-          <a href="clutch-replacement.html" role="menuitem">Clutch Replacement</a>
-          <a href="brake-repairs.html" role="menuitem">Brake Repairs</a>
-          <a href="vehicle-servicing.html" role="menuitem">Vehicle Servicing</a>
-          <a href="battery-replacement.html" role="menuitem">Battery Replacement</a>
-          <a href="mobile-mechanic-warrington.html" role="menuitem">Mobile Mechanic Warrington</a>
-          <span class="menu-divider" role="separator"></span>
-          <span class="menu-heading">More</span>
-          <a href="index.html#about" role="menuitem">About</a>
-          <a href="index.html#areas" role="menuitem">Areas Covered</a>
-          <a href="index.html#recent-jobs" role="menuitem">Recent Jobs</a>
-          <a href="index.html#reviews" role="menuitem">Reviews</a>
-          <a href="index.html#faq" role="menuitem">FAQs</a>
-          <a href="index.html#contact" role="menuitem">Contact</a>
+          <a href="index.html" role="menuitem">🏠 Home</a>
+          <a href="index.html#about" role="menuitem">👨‍🔧 About</a>
+
+          <details class="menu-submenu">
+            <summary>🔧 Services</summary>
+            <a href="engine-diagnostics.html" role="menuitem">Engine Diagnostics</a>
+            <a href="brake-repairs.html" role="menuitem">Brake Repairs</a>
+            <a href="vehicle-servicing.html" role="menuitem">Vehicle Servicing</a>
+            <a href="clutch-replacement.html" role="menuitem">Clutch Replacement</a>
+            <a href="battery-replacement.html" role="menuitem">Battery Replacement</a>
+          </details>
+
+          <details class="menu-submenu">
+            <summary>📍 Areas We Cover</summary>
+            <a href="mobile-mechanic-warrington.html" role="menuitem">Warrington</a>
+          </details>
+
+          <a href="index.html#recent-jobs" role="menuitem">📸 Recent Jobs</a>
+          <a href="index.html#reviews" role="menuitem">⭐ Reviews</a>
+          <a href="index.html#faq" role="menuitem">❓ FAQs</a>
+          <a href="index.html#contact" role="menuitem">📞 Contact</a>
         </div>
       </div>
+
       <a class="btn btn-primary btn-small header-call" href="tel:07722092401">&#9742; 07722 092401</a>
+
     </div>
+
   </div>
 </header>
 <main id="top">
@@ -819,14 +869,19 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
         <p>Looking for a reliable mobile mechanic in Warrington? Mackie's Mobile Mechanics provides convenient vehicle repairs, servicing and diagnostics at your home, workplace or roadside location across Warrington and the surrounding areas.</p>
         <p>Instead of spending time arranging transport to a garage, waiting for appointments or sitting in reception areas, we bring our services directly to you. Whether your vehicle needs routine servicing, fault diagnosis, brake repairs or battery replacement, our aim is to provide a professional and convenient service without disrupting your day.</p>
         <p>We regularly assist motorists throughout Warrington and understand how important it is to keep your vehicle safe, reliable and roadworthy. From family cars and daily commuters to vans and light commercial vehicles, we provide a wide range of mobile mechanic services designed to save time and hassle.</p>
+
         <h3>Vehicle Servicing in Warrington</h3>
-        <p>Regular vehicle servicing is one of the best ways to reduce the likelihood of unexpected breakdowns and expensive repairs. We provide interim and full vehicle servicing throughout Warrington, helping customers maintain their vehicles according to manufacturer recommendations.</p>
+        <p>Regular vehicle servicing is one of the best ways to reduce the likelihood of unexpected breakdowns and expensive repairs. We provide interim and full vehicle servicing throughout Warrington, helping customers maintain their vehicles according to manufacturer recommendations. A typical service may include engine oil and filter replacement, air and cabin filter replacement, fluid level checks, brake inspections, battery health checks and a general vehicle inspection.</p>
+
         <h3>Engine Diagnostics in Warrington</h3>
         <p>Modern vehicles rely heavily on electronic systems and warning lights. If your engine management light has appeared or your vehicle is behaving unusually, our mobile diagnostic service can help identify fault codes and point towards potential issues such as misfires, DPF warnings, sensor faults, starting problems and fuel system issues.</p>
+
         <h3>Brake Repairs in Warrington</h3>
         <p>Your vehicle's braking system is one of its most important safety components. If you notice squealing, grinding, vibration, warning lights or reduced braking performance, it is important to have the system checked as soon as possible. We provide mobile brake pad replacement, brake disc replacement, brake inspections and brake fault diagnosis across Warrington.</p>
+
         <h3>Battery Replacement &amp; General Repairs</h3>
-        <p>Flat batteries are one of the most common reasons for vehicle breakdowns. If your vehicle is struggling to start, particularly during colder weather, the battery may require testing or replacement.</p>
+        <p>Flat batteries are one of the most common reasons for vehicle breakdowns. If your vehicle is struggling to start, particularly during colder weather, the battery may require testing or replacement. We can diagnose battery-related problems and carry out replacement where required, along with a range of general vehicle repairs depending on the make, model and nature of the fault.</p>
+
         <h3>Areas we cover around Warrington</h3>
         <p>Although based locally, Mackie's Mobile Mechanics covers a wide area surrounding Warrington. If your location is not listed, feel free to get in touch and we can confirm whether we are able to attend.</p>
         <div class="area-links" aria-label="Areas covered around Warrington">
@@ -843,6 +898,7 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
           <span>Westbrook</span>
           <span>Burtonwood</span>
         </div>
+
         <h3>Why choose Mackie's Mobile Mechanics?</h3>
         <ul class="service-list">
           <li>Repairs carried out at your home or workplace where suitable</li>
@@ -852,12 +908,14 @@ footer { background: #050505; color: #8e8e8e; text-align: center; padding: 24px 
           <li>Clear communication before work is carried out</li>
           <li>Coverage across Warrington and surrounding areas</li>
         </ul>
+
         <h3>Frequently asked questions</h3>
         <details class="faq-item"><summary>Can a mobile mechanic service my car at home?</summary><p>Yes. Many routine servicing and repair tasks can be completed safely and professionally at your home or workplace, depending on the job, vehicle and location.</p></details>
         <details class="faq-item"><summary>Do you cover all of Warrington?</summary><p>We cover most areas of Warrington and surrounding locations. If you are unsure whether your area is covered, contact Mackie's Mobile Mechanics and we can confirm availability.</p></details>
         <details class="faq-item"><summary>Can you diagnose engine warning lights?</summary><p>Yes. We provide engine diagnostics using diagnostic equipment to help identify fault codes and potential issues linked to warning lights and vehicle running problems.</p></details>
         <details class="faq-item"><summary>Can a mobile mechanic repair brakes?</summary><p>Many brake repairs can be carried out by a mobile mechanic, including brake pad replacement, brake disc replacement and brake checks, depending on the vehicle and working conditions.</p></details>
         <details class="faq-item"><summary>How do I book an appointment?</summary><p>You can contact Mackie's Mobile Mechanics by phone or WhatsApp to discuss your vehicle, explain the issue and arrange a suitable booking.</p></details>
+
         <div class="service-cta-panel">
           <a class="btn btn-primary" href="tel:07722092401">&#9742; Call 07722 092401</a>
           <a class="btn btn-whatsapp" href="https://wa.me/447722092401" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Message on WhatsApp</a>
